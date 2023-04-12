@@ -1,0 +1,32 @@
+---
+documentation_complete: false
+name: NINJIO Security Training
+references:
+  - name: NIST 800-53 Revision 5
+    path: https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
+schema_version: 3.0.0
+satisfies:
+  - standard_key: Electronic Version of NIST SP 800-53 Rev 5 Controls and SP 800-53A Rev 5 Assessment Procedures
+    control_key: AT-2
+    narrative:
+      - text: NINJIO security training helps meet the requirements of AT-2 by providing ongoing cybersecurity awareness training for all organizational users. The training content covers a variety of topics, including phishing, social engineering, and password management, which helps raise user awareness and promote secure behavior.
+  - standard_key: Electronic Version of NIST SP 800-53 Rev 5 Controls and SP 800-53A Rev 5 Assessment Procedures
+    control_key: AT-3
+    narrative:
+      - text: NINJIO offers role-based training content tailored to specific user roles, such as IT administrators, managers, and executives. This training helps fulfill the AT-3 requirements by providing targeted content to users with significant security responsibilities.
+  - standard_key: Electronic Version of NIST SP 800-53 Rev 5 Controls and SP 800-53A Rev 5 Assessment Procedures
+    control_key: AT-4
+    narrative:
+      - text: By providing a training platform with tracking and reporting capabilities, NINJIO helps organizations maintain records of completed security training for each user, fulfilling the requirements of AT-4.
+  - standard_key: Electronic Version of NIST SP 800-53 Rev 5 Controls and SP 800-53A Rev 5 Assessment Procedures
+    control_key: PM-13
+    narrative:
+      - text: (CHANGE HERE 3) NINJIO's security training materials contribute to the development of a skilled and knowledgeable information security workforce. By providing continuous training, NINJIO supports an organization in meeting the PM-13 control requirements.
+  - standard_key: Electronic Version of NIST SP 800-53 Rev 5 Controls and SP 800-53A Rev 5 Assessment Procedures
+    control_key: PM-14
+    narrative:
+      - text: The use of NINJIO security training in an organization contributes to the PM-14 control by offering regular training on current and emerging cybersecurity threats. This helps organizations maintain a high level of user awareness and reduces the likelihood of security incidents.
+  - standard_key: Electronic Version of NIST SP 800-53 Rev 5 Controls and SP 800-53A Rev 5 Assessment Procedures
+    control_key: SA-3
+    narrative:
+      - text: By integrating NINJIO security training into the system development life cycle, organizations can ensure that developers and other personnel involved in system development are aware of security best practices, contributing to the fulfillment of the SA-3 control.

@@ -111,7 +111,7 @@ components:
   - ./components/AWS_core
   - ./components/AWS_implementation
 standards:
-  - ./standards/FRIST-800-53.yaml
+  - ./standards/Electronic Version of NIST SP 800-53 Rev 5 Controls and SP 800-53A Rev 5 Assessment Procedures.yaml
 certifications:
   - ./certifications/FredRAMP-low.yaml
 ```

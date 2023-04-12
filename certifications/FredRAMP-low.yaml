@@ -1,7 +1,7 @@
 name: FredRAMP-low
 standards:
 
-  FRIST-800-53:
+  Electronic Version of NIST SP 800-53 Rev 5 Controls and SP 800-53A Rev 5 Assessment Procedures:
     AU-1: {}
     AU-2: {}
     PE-2: {}

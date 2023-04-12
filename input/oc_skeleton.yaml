@@ -1,0 +1,39 @@
+documentation_complete: false
+name: Component Name
+references:
+- name: Reference
+  path: http://VerificationURL.com
+satisfies:
+- control_key: cm-5
+  covered_by: []
+  implementation_status: implemented
+  control_origin: inherited
+  narrative:
+    - text: "Control implementation statement for CM-5"
+- control_key: cm-6
+  covered_by: []
+  implementation_status: partial
+  control_origin: inherited
+  narrative:
+    - key: "a"
+      text: "Control implementation statement for CM-6 part A"
+    - key: "b"
+      text: "Control implementation statement for CM-6 part B"
+  parameters:
+    - key: "a"
+      text: "Parameter A for CM-6"
+    - key: "b"
+      text: "Parameter B for CM-6"
+  standard_key: NIST_800-53_rev4
+responsible_role: Role Name
+schema_version: 3.0.0
+verifications:
+- key: EC2_Verification_2
+  name: EC2 Governor 2
+  path: artifact-ec2-1.png
+- key: EC2_Verification_1
+  name: EC2 Verification 1
+  path: http://VerificationURL.com
+extension:
+- last-modified: 2022-10-30T19:14:13+00:00,
+  version: 2022-10-30T19:14:13+00:00 

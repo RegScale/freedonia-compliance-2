@@ -1,0 +1,80 @@
+---
+documentation_complete: false
+name: Okta Authentication Services
+references:
+  - name: NIST 800-53 Revision 5
+    path: https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
+schema_version: 3.0.0
+satisfies:
+  - standard_key: Electronic Version of NIST SP 800-53 Rev 5 Controls and SP 800-53A Rev 5 Assessment Procedures
+    control_key: AC-2
+    narrative:
+      - text: Okta Authentication Services help organizations implement account management processes such as provisioning, deprovisioning, and account modifications, thus contributing to the requirements of AC-2.
+  - standard_key: Electronic Version of NIST SP 800-53 Rev 5 Controls and SP 800-53A Rev 5 Assessment Procedures
+    control_key: AC-3
+    narrative:
+      - text: By providing centralized access control for enterprise applications, Okta Authentication Services support the enforcement of access control policies and contribute to meeting the AC-3 requirements.
+  - standard_key: Electronic Version of NIST SP 800-53 Rev 5 Controls and SP 800-53A Rev 5 Assessment Procedures
+    control_key: AC-8
+    narrative:
+      - text: Okta supports the implementation of system use notifications for users accessing enterprise applications, helping organizations meet the requirements of AC-8.
+  - standard_key: Electronic Version of NIST SP 800-53 Rev 5 Controls and SP 800-53A Rev 5 Assessment Procedures
+    control_key: AC-11
+    narrative:
+      - text: Okta Authentication Services allow organizations to configure session timeouts and other session controls, contributing to the fulfillment of AC-11 requirements.
+  - standard_key: Electronic Version of NIST SP 800-53 Rev 5 Controls and SP 800-53A Rev 5 Assessment Procedures
+    control_key: CM-6
+    control_title: Configuration Settings
+    narratives:
+      - text: Okta can help organizations enforce and manage configuration settings for authentication and access control across their enterprise applications.
+  - standard_key: Electronic Version of NIST SP 800-53 Rev 5 Controls and SP 800-53A Rev 5 Assessment Procedures
+    control_key: CM-7
+    control_title: Least Functionality
+    narrative:
+      - text: By centralizing access control and managing user permissions, Okta can support organizations in implementing the principle of least functionality, granting users the minimum level of access necessary to perform their tasks.
+  - standard_key: Electronic Version of NIST SP 800-53 Rev 5 Controls and SP 800-53A Rev 5 Assessment Procedures
+    control_key: IA-2
+    narrative:
+      - text: Okta provides multi-factor authentication (MFA) capabilities that can be integrated with various enterprise applications, helping organizations meet the requirements of IA-2.
+  - standard_key: Electronic Version of NIST SP 800-53 Rev 5 Controls and SP 800-53A Rev 5 Assessment Procedures
+    control_key: IA-3
+    narrative:
+      - text: By implementing device identification and authentication, Okta contributes to meeting the requirements of IA-3, ensuring that devices are authenticated before accessing enterprise resources.
+  - standard_key: Electronic Version of NIST SP 800-53 Rev 5 Controls and SP 800-53A Rev 5 Assessment Procedures
+    control_key: IA-5
+    narrative:
+      - text: Okta supports the enforcement of password complexity and other security requirements for user authenticators, helping organizations meet the IA-5 requirements.
+  - standard_key: Electronic Version of NIST SP 800-53 Rev 5 Controls and SP 800-53A Rev 5 Assessment Procedures
+    control_key: IA-8
+    narrative:
+      - text: Okta Authentication Services facilitate the identification and authentication process for both local and remote users, contributing to the requirements of IA-8.
+  - standard_key: Electronic Version of NIST SP 800-53 Rev 5 Controls and SP 800-53A Rev 5 Assessment Procedures
+    control_key: PL-8
+    control_title: Information Security Architecture
+    narratives:
+      - text: Okta's authentication and access control services can be incorporated into the organization's information security architecture, enhancing the overall security posture.
+  - standard_key: Electronic Version of NIST SP 800-53 Rev 5 Controls and SP 800-53A Rev 5 Assessment Procedures
+    control_key: RA-5
+    control_title: Vulnerability Scanning
+    narratives:
+      - text: When integrated with vulnerability scanning tools and processes, Okta can help organizations to identify and remediate vulnerabilities related to authentication and access control.
+  - standard_key: Electronic Version of NIST SP 800-53 Rev 5 Controls and SP 800-53A Rev 5 Assessment Procedures
+    control_key: SA-1
+    control_title:: Developer Security Testing and Evaluation
+    narratives:
+      - text: As part of a secure development process, developers can use Okta's APIs and SDKs to integrate secure authentication and access control mechanisms into applications, contributing to the SA-11 control requirements.
+  - standard_key: Electronic Version of NIST SP 800-53 Rev 5 Controls and SP 800-53A Rev 5 Assessment Procedures
+    control_key: SC-7
+    control_title: Boundary Protection
+    narratives:
+      - text: By implementing Okta's Single Sign-On (SSO) and adaptive Multi-Factor Authentication (MFA) capabilities, organizations can strengthen their boundary protection measures and control access to their network and resources.
+  - standard_key: Electronic Version of NIST SP 800-53 Rev 5 Controls and SP 800-53A Rev 5 Assessment Procedures
+    control_key: SC-1
+    control_title:: Cryptographic Protection
+    narratives:
+      - text: Okta provides cryptographic protection for data in transit and at rest, helping organizations meet the requirements of the SC-13 control.
+  - standard_key: Electronic Version of NIST SP 800-53 Rev 5 Controls and SP 800-53A Rev 5 Assessment Procedures
+    control_key: SI-4
+    control_title: Information System Monitoring
+    narratives:
+      - text: Okta provides monitoring and logging features that can be integrated with an organization's security information and event management (SIEM) solution, contributing to the SI-4 control requirements.

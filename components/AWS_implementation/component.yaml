@@ -7,7 +7,7 @@ references:
   type: URL
 satisfies:
 - control_key: AU-2
-  standard_key: FRIST-800-53
+  standard_key: Electronic Version of NIST SP 800-53 Rev 5 Controls and SP 800-53A Rev 5 Assessment Procedures
   covered_by: []
   implementation_status: none
   narrative:
@@ -20,7 +20,7 @@ satisfies:
         A verification step can be done by confirming the existence
         of the Cloudwatch bucket etc. with InSpec.
 - control_key: SC-1
-  standard_key: FRIST-800-53
+  standard_key: Electronic Version of NIST SP 800-53 Rev 5 Controls and SP 800-53A Rev 5 Assessment Procedures
   covered_by: []
   implementation_status: none
   narrative:
@@ -37,7 +37,7 @@ satisfies:
         this narrative suffices to provide that control. A verification step could be something
         that checks that the referenced policy is no more than 365 days old.
 - control_key: SC-7
-  standard_key: FRIST-800-53
+  standard_key: Electronic Version of NIST SP 800-53 Rev 5 Controls and SP 800-53A Rev 5 Assessment Procedures
   covered_by: []
   implementation_status: none
   narrative:

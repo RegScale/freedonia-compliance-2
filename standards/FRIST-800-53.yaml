@@ -1,4 +1,4 @@
-name: FRIST-800-53
+name: Electronic Version of NIST SP 800-53 Rev 5 Controls and SP 800-53A Rev 5 Assessment Procedures
 AU-1:
   family: AU
   name: Audit and Accountability Policy and Procedures

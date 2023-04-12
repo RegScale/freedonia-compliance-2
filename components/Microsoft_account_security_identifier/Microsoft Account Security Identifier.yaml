@@ -1,0 +1,55 @@
+name: Microsoft Account Security Identifier (SID)
+schema_version: 3.0.0
+documentation_complete: false
+satisfies:
+- control_key: IA-4
+  control_name: Identifier Management
+  standard_key: Electronic Version of NIST SP 800-53 Rev 5 Controls and SP 800-53A Rev 5 Assessment Procedures
+  covered_by: []
+  security_control_type: Assigned
+  narrative:
+  - text: >-
+      Active Directory and local Windows operating system accounts are assigned a
+      unique security identifier (SID). Active Directory accounts are assigned a globally
+      unique Object ID. These unique IDs are not subject to reuse.
+
+
+      Active Directory and local Windows operating system accounts are assigned a
+      unique security identifier (SID). Azure Active Directory accounts are assigned
+      a globally unique Object ID. These unique IDs are not subject to reuse.
+  remarks:
+  - text: ''
+- control_key: IA.3.085
+  control_name: Prevent the reuse of identifiers for a defined period.
+  standard_key: CMMC_ver1
+  covered_by: []
+  security_control_type: Assigned
+  narrative:
+  - text: >-
+      Active Directory and local Windows operating system accounts are assigned a
+      unique security identifier (SID). Active Directory accounts are assigned a globally
+      unique Object ID. These unique IDs are not subject to reuse.
+
+
+      Active Directory and local Windows operating system accounts are assigned a
+      unique security identifier (SID). Azure Active Directory accounts are assigned
+      a globally unique Object ID. These unique IDs are not subject to reuse.
+  remarks:
+  - text: ~
+- control_key: IA.3.086
+  control_name: Disable identifiers after a defined period of inactivity.
+  standard_key: CMMC_ver1
+  covered_by: []
+  security_control_type: Assigned
+  narrative:
+  - text: >-
+      Active Directory and local Windows operating system accounts are assigned a
+      unique security identifier (SID). Active Directory accounts are assigned a globally
+      unique Object ID. These unique IDs are not subject to reuse.
+
+
+      Active Directory and local Windows operating system accounts are assigned a
+      unique security identifier (SID). Azure Active Directory accounts are assigned
+      a globally unique Object ID. These unique IDs are not subject to reuse.
+  remarks:
+  - text: ~

@@ -1,0 +1,85 @@
+name: Microsoft Azure Active Directory Security
+schema_version: 3.0.0
+documentation_complete: false
+satisfies:
+- control_key: AC-3
+  control_name: Access Enforcement
+  standard_key: Electronic Version of NIST SP 800-53 Rev 5 Controls and SP 800-53A Rev 5 Assessment Procedures
+  covered_by: []
+  security_control_type: Assigned
+  narrative:
+  - text: Azure Active Directory enforces approved authorizations to the Customer
+      environment using role-based access control. Azure Active Directory roles assigned
+      to users or groups control logical access to resources within Azure at the resource,
+      group, or subscription level. Active Directory security groups control logical
+      access to OS-level resources and functions. Access to Azure Active Directory
+      security groups is managed by Security Group Administrators. Users are placed
+      in appropriate security groups according to their roles, using the principle
+      of least privilege.
+  remarks:
+  - text: ''
+- control_key: AC-6.10
+  control_name: Prohibit Non-privileged Users from Executing Privileged Functions
+  standard_key: Electronic Version of NIST SP 800-53 Rev 5 Controls and SP 800-53A Rev 5 Assessment Procedures
+  covered_by: []
+  security_control_type: Assigned
+  narrative:
+  - text: Azure Active Directory enforces approved authorizations to the Customer
+      environment using role-based access control to restrict users to only privileges
+      explicitly assigned. Access to Azure Active Directory security groups is managed
+      by Security Group Administrators. Non-Privileged users are not granted access
+      to security groups that would allow them to access privileged functions, including
+      any permissions that would allow them to disable, circumvent, or alter security
+      safeguards.
+  remarks:
+  - text: ''
+- control_key: AC.1.001
+  control_name: Limit information system access to authorized users, processes acting
+    on behalf of authorized users, or devices (including other information systems).
+  standard_key: CMMC_ver1
+  covered_by: []
+  security_control_type: Assigned
+  narrative:
+  - text: Azure Active Directory enforces approved authorizations to the Customer
+      environment using role-based access control. Azure Active Directory roles assigned
+      to users or groups control logical access to resources within Azure at the resource,
+      group, or subscription level. Active Directory security groups control logical
+      access to OS-level resources and functions. Access to Azure Active Directory
+      security groups is managed by Security Group Administrators. Users are placed
+      in appropriate security groups according to their roles, using the principle
+      of least privilege.
+  remarks:
+  - text: None
+- control_key: AC.1.002
+  control_name: Limit information system access to the types of transactions and functions
+    that authorized users are permitted to execute.
+  standard_key: CMMC_ver1
+  covered_by: []
+  security_control_type: Assigned
+  narrative:
+  - text: Azure Active Directory enforces approved authorizations to the Customer
+      environment using role-based access control. Azure Active Directory roles assigned
+      to users or groups control logical access to resources within Azure at the resource,
+      group, or subscription level. Active Directory security groups control logical
+      access to OS-level resources and functions. Access to Azure Active Directory
+      security groups is managed by Security Group Administrators. Users are placed
+      in appropriate security groups according to their roles, using the principle
+      of least privilege.
+  remarks:
+  - text: None
+- control_key: AC.3.018
+  control_name: Prevent non-privileged users from executing privileged functions and
+    capture the execution of such functions in audit logs.
+  standard_key: CMMC_ver1
+  covered_by: []
+  security_control_type: Assigned
+  narrative:
+  - text: Azure Active Directory enforces approved authorizations to the Customer
+      environment using role-based access control to restrict users to only privileges
+      explicitly assigned. Access to Azure Active Directory security groups is managed
+      by Security Group Administrators. Non-Privileged users are not granted access
+      to security groups that would allow them to access privileged functions, including
+      any permissions that would allow them to disable, circumvent, or alter security
+      safeguards.
+  remarks:
+  - text: None

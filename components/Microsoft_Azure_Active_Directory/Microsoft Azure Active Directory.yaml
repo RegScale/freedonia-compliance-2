@@ -1,0 +1,705 @@
+name: Microsoft Azure Active Directory
+schema_version: 3.0.0
+documentation_complete: false
+satisfies:
+- control_key: AC-17.1
+  control_name: Automated Monitoring / Control
+  standard_key: Electronic Version of NIST SP 800-53 Rev 5 Controls and SP 800-53A Rev 5 Assessment Procedures
+  covered_by: []
+  security_control_type: Assigned
+  narrative:
+  - text: Azure Active Directory is used to monitor and control all remote access.
+      Azure Active Directory includes security, activity, and audit reports for the
+      directory.
+  remarks:
+  - text: ''
+- control_key: AC-17.9
+  control_name: Disconnect / Disable Access
+  standard_key: Electronic Version of NIST SP 800-53 Rev 5 Controls and SP 800-53A Rev 5 Assessment Procedures
+  covered_by: []
+  security_control_type: Assigned
+  narrative:
+  - text: If an Azure Active Directory account is disabled or removed, Azure portal
+      access is disconnected immediately. Similarly, if a virtual machine OS-level
+      account is disabled or removed, remote desktop access via the jumpbox is disconnected
+      immediately. Customers must implement remote access disconnect for the web application.
+  remarks:
+  - text: ''
+- control_key: AC-2.11
+  control_name: Usage Conditions
+  standard_key: Electronic Version of NIST SP 800-53 Rev 5 Controls and SP 800-53A Rev 5 Assessment Procedures
+  covered_by: []
+  security_control_type: Assigned
+  narrative:
+  - text: Azure Active Directory manages access to information systems within Azure.
+      Usage restrictions (e.g., time-of-day restrictions) required by the security
+      policies are defined and enforced within Azure Active Directory by Account Administrators.
+  remarks:
+  - text: ''
+- control_key: AC-3
+  control_name: Access Enforcement
+  standard_key: Electronic Version of NIST SP 800-53 Rev 5 Controls and SP 800-53A Rev 5 Assessment Procedures
+  covered_by: []
+  security_control_type: Assigned
+  narrative:
+  - text: Azure Active Directory enforces approved authorizations to the Customer
+      environment using role-based access control. Azure Active Directory roles assigned
+      to users or groups control logical access to resources within Azure at the resource,
+      group, or subscription level. Active Directory security groups control logical
+      access to OS-level resources and functions. Access to Azure Active Directory
+      security groups is managed by Security Group Administrators. Users are placed
+      in appropriate security groups according to their roles, using the principle
+      of least privilege.
+  remarks:
+  - text: ''
+- control_key: AC-5
+  control_name: Separation of Duties
+  standard_key: Electronic Version of NIST SP 800-53 Rev 5 Controls and SP 800-53A Rev 5 Assessment Procedures
+  covered_by: []
+  security_control_type: Assigned
+  narrative:
+  - text: Azure Active Directory implements role-based access control which can be
+      configured to separate duties according to organization requirements. Azure
+      Active Directory account privileges are implemented using role-based access
+      control by assigning users to roles; Active Directory account privileges are
+      implemented using role-based access control by assigning users to security groups.
+  remarks:
+  - text: ''
+- control_key: AC-6
+  control_name: Least Privilege
+  standard_key: Electronic Version of NIST SP 800-53 Rev 5 Controls and SP 800-53A Rev 5 Assessment Procedures
+  covered_by: []
+  security_control_type: Assigned
+  narrative:
+  - text: Azure Active Directory implements role-based access control to restrict
+      users to only privileges explicitly assigned. Azure Active Directory account
+      privileges are implemented using role-based access control by assigning users
+      to roles; Active Directory account privileges are implemented using role-based
+      access control by assigning users to security groups.
+  remarks:
+  - text: ''
+- control_key: AC-6.10
+  control_name: Prohibit Non-privileged Users from Executing Privileged Functions
+  standard_key: Electronic Version of NIST SP 800-53 Rev 5 Controls and SP 800-53A Rev 5 Assessment Procedures
+  covered_by: []
+  security_control_type: Assigned
+  narrative:
+  - text: Azure Active Directory enforces approved authorizations to the Customer
+      environment using role-based access control to restrict users to only privileges
+      explicitly assigned. Access to Azure Active Directory security groups is managed
+      by Security Group Administrators. Non-Privileged users are not granted access
+      to security groups that would allow them to access privileged functions, including
+      any permissions that would allow them to disable, circumvent, or alter security
+      safeguards.
+  remarks:
+  - text: ''
+- control_key: AC-6.8
+  control_name: Privilege Levels for Code Execution
+  standard_key: Electronic Version of NIST SP 800-53 Rev 5 Controls and SP 800-53A Rev 5 Assessment Procedures
+  covered_by: []
+  security_control_type: Assigned
+  narrative:
+  - text: Azure Active Directory implements role-based access control to restrict
+      users to only privileges explicitly assigned. Virtual machine OS-level protections
+      do not allow software to execute at a higher privilege level than users executing
+      the software. Azure Active Directory group policy configuration can be used
+      to deploy customer security policies that meet specific security requirements.
+      Customer Azure virtual machines can have these policies applied by Azure Active
+      Directory. Azure Active Directory group policy configurations can include security
+      control implementations for AC-6(9).
+  remarks:
+  - text: ''
+- control_key: AC.1.001
+  control_name: Limit information system access to authorized users, processes acting
+    on behalf of authorized users, or devices (including other information systems).
+  standard_key: CMMC_ver1
+  covered_by: []
+  security_control_type: Assigned
+  narrative:
+  - text: Azure Active Directory enforces approved authorizations to the Customer
+      environment using role-based access control. Azure Active Directory roles assigned
+      to users or groups control logical access to resources within Azure at the resource,
+      group, or subscription level. Active Directory security groups control logical
+      access to OS-level resources and functions. Access to Azure Active Directory
+      security groups is managed by Security Group Administrators. Users are placed
+      in appropriate security groups according to their roles, using the principle
+      of least privilege.
+  remarks:
+  - text: ~
+- control_key: AC.1.002
+  control_name: Limit information system access to the types of transactions and functions
+    that authorized users are permitted to execute.
+  standard_key: CMMC_ver1
+  covered_by: []
+  security_control_type: Assigned
+  narrative:
+  - text: Azure Active Directory enforces approved authorizations to the Customer
+      environment using role-based access control. Azure Active Directory roles assigned
+      to users or groups control logical access to resources within Azure at the resource,
+      group, or subscription level. Active Directory security groups control logical
+      access to OS-level resources and functions. Access to Azure Active Directory
+      security groups is managed by Security Group Administrators. Users are placed
+      in appropriate security groups according to their roles, using the principle
+      of least privilege.
+  remarks:
+  - text: ~
+- control_key: AC.2.007
+  control_name: Employ the principle of least privilege, including for specific security
+    functions and privileged accounts.
+  standard_key: CMMC_ver1
+  covered_by: []
+  security_control_type: Assigned
+  narrative:
+  - text: Azure Active Directory implements role-based access control to restrict
+      users to only privileges explicitly assigned. Azure Active Directory account
+      privileges are implemented using role-based access control by assigning users
+      to roles; Active Directory account privileges are implemented using role-based
+      access control by assigning users to security groups.
+  remarks:
+  - text: ~
+- control_key: AC.2.013
+  control_name: Monitor and control remote access sessions.
+  standard_key: CMMC_ver1
+  covered_by: []
+  security_control_type: Assigned
+  narrative:
+  - text: Azure Active Directory is used to monitor and control all remote access.
+      Azure Active Directory includes security, activity, and audit reports for the
+      directory.
+  remarks:
+  - text: ~
+- control_key: AC.3.017
+  control_name: Separate the duties of individuals to reduce the risk of malevolent
+    activity without collusion.
+  standard_key: CMMC_ver1
+  covered_by: []
+  security_control_type: Assigned
+  narrative:
+  - text: Azure Active Directory implements role-based access control which can be
+      configured to separate duties according to organization requirements. Azure
+      Active Directory account privileges are implemented using role-based access
+      control by assigning users to roles; Active Directory account privileges are
+      implemented using role-based access control by assigning users to security groups.
+  remarks:
+  - text: ~
+- control_key: AC.3.018
+  control_name: Prevent non-privileged users from executing privileged functions and
+    capture the execution of such functions in audit logs.
+  standard_key: CMMC_ver1
+  covered_by: []
+  security_control_type: Assigned
+  narrative:
+  - text: Azure Active Directory enforces approved authorizations to the Customer
+      environment using role-based access control to restrict users to only privileges
+      explicitly assigned. Access to Azure Active Directory security groups is managed
+      by Security Group Administrators. Non-Privileged users are not granted access
+      to security groups that would allow them to access privileged functions, including
+      any permissions that would allow them to disable, circumvent, or alter security
+      safeguards.
+  remarks:
+  - text: ~
+- control_key: AU-12
+  control_name: Audit Generation
+  standard_key: Electronic Version of NIST SP 800-53 Rev 5 Controls and SP 800-53A Rev 5 Assessment Procedures
+  covered_by: []
+  security_control_type: Assigned
+  narrative:
+  - text: Access to audit functions is restricted using role-based access control
+      within Azure and at the virtual machine OS-level. The configuration of events
+      selected to be audited by resources deployed can be configured by users with
+      appropriate role-based authorization assigned within Azure Active Directory.
+  remarks:
+  - text: ''
+- control_key: AU-12.3
+  control_name: Changes by Authorized Individuals
+  standard_key: Electronic Version of NIST SP 800-53 Rev 5 Controls and SP 800-53A Rev 5 Assessment Procedures
+  covered_by: []
+  security_control_type: Assigned
+  narrative:
+  - text: Access to audit functions is restricted using role-based access control
+      within Azure and at the virtual machine OS-level. The configuration of events
+      selected to be audited by resources deployed can be configured by users with
+      appropriate role-based authorization assigned within Azure Active Directory.
+  remarks:
+  - text: ''
+- control_key: AU-9
+  control_name: Protection of Audit Information
+  standard_key: Electronic Version of NIST SP 800-53 Rev 5 Controls and SP 800-53A Rev 5 Assessment Procedures
+  covered_by: []
+  security_control_type: Assigned
+  narrative:
+  - text: Tightly managed access controls are used to protect audit information and
+      tools from unauthorized access, modification, and deletion. Azure Active Directory
+      enforces approved logical access to users using a layered approach of access
+      authorizations and logical controls using Active Directory policies and role-based
+      group memberships. The ability to view audit information and use auditing tools
+      is limited to users that require these permissions.
+  remarks:
+  - text: ''
+- control_key: AU.2.041
+  control_name: Ensure that the actions of individual system users can be uniquely
+    traced to those users so they can be held accountable for their actions.
+  standard_key: CMMC_ver1
+  covered_by: []
+  security_control_type: Assigned
+  narrative:
+  - text: Access to audit functions is restricted using role-based access control
+      within Azure and at the virtual machine OS-level. The configuration of events
+      selected to be audited by resources deployed can be configured by users with
+      appropriate role-based authorization assigned within Azure Active Directory.
+  remarks:
+  - text: ~
+- control_key: AU.2.042
+  control_name: Create and retain system audit logs and records to the extent needed
+    to enable the monitoring, analysis, investigation, and reporting of unlawful or     unauthorized
+    system activity.
+  standard_key: CMMC_ver1
+  covered_by: []
+  security_control_type: Assigned
+  narrative:
+  - text: Access to audit functions is restricted using role-based access control
+      within Azure and at the virtual machine OS-level. The configuration of events
+      selected to be audited by resources deployed can be configured by users with
+      appropriate role-based authorization assigned within Azure Active Directory.
+  remarks:
+  - text: ~
+- control_key: AU.3.049
+  control_name: Protect audit information and audit logging tools from unauthorized
+    access, modification, and deletion.
+  standard_key: CMMC_ver1
+  covered_by: []
+  security_control_type: Assigned
+  narrative:
+  - text: Tightly managed access controls are used to protect audit information and
+      tools from unauthorized access, modification, and deletion. Azure Active Directory
+      enforces approved logical access to users using a layered approach of access
+      authorizations and logical controls using Active Directory policies and role-based
+      group memberships. The ability to view audit information and use auditing tools
+      is limited to users that require these permissions.
+  remarks:
+  - text: ~
+- control_key: AU.5.055
+  control_name: Identify assets not reporting audit logs and assure appropriate organizationally
+    defined systems are logging.
+  standard_key: CMMC_ver1
+  covered_by: []
+  security_control_type: Assigned
+  narrative:
+  - text: Access to audit functions is restricted using role-based access control
+      within Azure and at the virtual machine OS-level. The configuration of events
+      selected to be audited by resources deployed can be configured by users with
+      appropriate role-based authorization assigned within Azure Active Directory.
+  remarks:
+  - text: ~
+- control_key: CM-5
+  control_name: Access Restrictions for Change
+  standard_key: Electronic Version of NIST SP 800-53 Rev 5 Controls and SP 800-53A Rev 5 Assessment Procedures
+  covered_by: []
+  security_control_type: Assigned
+  narrative:
+  - text: Role-Based Access Control (RBAC) enforced by Azure Active Directory is used
+      to define, document, approve, and enforce logical access restrictions associated
+      with changes. All accounts created within the system are role-based, providing
+      strict control over which users can view and control deployed resources. Personnel
+      request access from Account Administrators and if approved, are placed in the
+      appropriate security groups according to their roles. Access to the production
+      environment is only allowed to members of specific security groups after approval.
+  remarks:
+  - text: ''
+- control_key: CM.3.067
+  control_name: Define, document, approve, and enforce physical and logical access
+    restrictions associated with changes to organizational systems.
+  standard_key: CMMC_ver1
+  covered_by: []
+  security_control_type: Assigned
+  narrative:
+  - text: Role-Based Access Control (RBAC) enforced by Azure Active Directory is used
+      to define, document, approve, and enforce logical access restrictions associated
+      with changes. All accounts created within the system are role-based, providing
+      strict control over which users can view and control deployed resources. Personnel
+      request access from Account Administrators and if approved, are placed in the
+      appropriate security groups according to their roles. Access to the production
+      environment is only allowed to members of specific security groups after approval.
+  remarks:
+  - text: ~
+- control_key: IA-2
+  control_name: Identification and Authentication (organizational Users)
+  standard_key: Electronic Version of NIST SP 800-53 Rev 5 Controls and SP 800-53A Rev 5 Assessment Procedures
+  covered_by: []
+  security_control_type: Assigned
+  narrative:
+  - text: Personnel accessing the information system environment are uniquely identified
+      by their username and authenticated using Azure Active Directory. Authentication
+      to Azure Active Directory is required in order to access the information system.
+  remarks:
+  - text: ''
+- control_key: IA-2.8
+  control_name: Network Access to Privileged Accounts - Replay Resistant
+  standard_key: Electronic Version of NIST SP 800-53 Rev 5 Controls and SP 800-53A Rev 5 Assessment Procedures
+  covered_by: []
+  security_control_type: Assigned
+  narrative:
+  - text: Access to the production environment is protected from replay attacks by
+      the built-in Kerberos functionality of Azure Active Directory. In Kerberos authentication,
+      the authenticator sent by the client contains additional data, such as an encrypted
+      IP list, client timestamps, and ticket lifetime. If a packet is replayed, the
+      timestamp is checked. If the timestamp is earlier than, or the same as a previous
+      authenticator, the packet is rejected.
+  remarks:
+  - text: ''
+- control_key: IA-2.9
+  control_name: Network Access to Non-privileged Accounts - Replay Resistant
+  standard_key: Electronic Version of NIST SP 800-53 Rev 5 Controls and SP 800-53A Rev 5 Assessment Procedures
+  covered_by: []
+  security_control_type: Assigned
+  narrative:
+  - text: All accounts are protected from replay attacks by the built-in Kerberos
+      functionality of Azure Active Directory. In Kerberos authentication, the authenticator
+      sent by the client contains additional data, such as an encrypted IP list, the
+      client timestamps, and the ticket lifetime. If a packet is replayed, the timestamp
+      is checked. If the timestamp is earlier than, or the same as a previous authenticator,
+      the packet is rejected.
+  remarks:
+  - text: ''
+- control_key: IA-4
+  control_name: Identifier Management
+  standard_key: Electronic Version of NIST SP 800-53 Rev 5 Controls and SP 800-53A Rev 5 Assessment Procedures
+  covered_by: []
+  security_control_type: Assigned
+  narrative:
+  - text: All accounts within Azure Active Directory are configured to automatically
+      be disabled after 35 days of inactivity.
+  remarks:
+  - text: ''
+- control_key: IA-4
+  control_name: Identifier Management
+  standard_key: Electronic Version of NIST SP 800-53 Rev 5 Controls and SP 800-53A Rev 5 Assessment Procedures
+  covered_by: []
+  security_control_type: Assigned
+  narrative:
+  - text: Azure Active Directory is the central account repository used to provide
+      access to the service environment. When accounts are created in Azure Active
+      Directory, the user's unique identifier is assigned to the individual.
+  remarks:
+  - text: ''
+- control_key: IA-4
+  control_name: Identifier Management
+  standard_key: Electronic Version of NIST SP 800-53 Rev 5 Controls and SP 800-53A Rev 5 Assessment Procedures
+  covered_by: []
+  security_control_type: Assigned
+  narrative:
+  - text: Active Directory and local Windows operating system accounts are assigned
+      a unique security identifier (SID). Azure Active Directory accounts are assigned
+      a globally unique Object ID. These unique IDs are not subject to reuse.
+  remarks:
+  - text: ''
+- control_key: IA-4.4
+  control_name: Identify User Status
+  standard_key: Electronic Version of NIST SP 800-53 Rev 5 Controls and SP 800-53A Rev 5 Assessment Procedures
+  covered_by: []
+  security_control_type: Assigned
+  narrative:
+  - text: Azure Active Directory denotes contractors and vendors by using naming conventions
+      applied to their unique Azure Active Directory credentials.
+  remarks:
+  - text: ''
+- control_key: IA-5
+  control_name: Authenticator Management
+  standard_key: Electronic Version of NIST SP 800-53 Rev 5 Controls and SP 800-53A Rev 5 Assessment Procedures
+  covered_by: []
+  security_control_type: Assigned
+  narrative:
+  - text: Azure Active Directory assigns a unique identification and random temporary
+      password that meets policy requirements at the initial time of account creation.
+      Azure Active Directory maintains the unique identification associated with the
+      account throughout the life of the account. Account identification is never
+      repeated with Azure Active Directory.
+  remarks:
+  - text: ''
+- control_key: IA-5.1
+  control_name: Password-based Authentication
+  standard_key: Electronic Version of NIST SP 800-53 Rev 5 Controls and SP 800-53A Rev 5 Assessment Procedures
+  covered_by: []
+  security_control_type: Assigned
+  narrative:
+  - text: Azure Active Directory is used to manage access to the information system.
+      Whenever an account is initially created, or a temporary password is generated,
+      Azure Active Directory is employed to require that the user change the password
+      at the next login.
+  remarks:
+  - text: ''
+- control_key: IA-5.1
+  control_name: Password-based Authentication
+  standard_key: Electronic Version of NIST SP 800-53 Rev 5 Controls and SP 800-53A Rev 5 Assessment Procedures
+  covered_by: []
+  security_control_type: Assigned
+  narrative:
+  - text: Azure Active Directory is used to ensure that all passwords are cryptographically
+      protected while stored and transmitted. Passwords stored by Azure Active Directory
+      and locally on deployed Windows virtual machines are automatically hashed as
+      part of built-in security functionality. Remote desktop authentication sessions
+      are secured using TLS to ensure authenticators are protected when transmitted.
+  remarks:
+  - text: ''
+- control_key: IA-5.4
+  control_name: Automated Support for Password Strength Determination
+  standard_key: Electronic Version of NIST SP 800-53 Rev 5 Controls and SP 800-53A Rev 5 Assessment Procedures
+  covered_by: []
+  security_control_type: Assigned
+  narrative:
+  - text: Azure Active Directory is the automated tool employed to determine if password
+      authenticators are sufficiently strong to satisfy the password length, complexity,
+      rotation, and lifetime restrictions established in IA-5 (1). Azure Active Directory
+      ensures that password authenticator strength at creation meets these standards.
+  remarks:
+  - text: ''
+- control_key: IA.1.076
+  control_name: Identify information system users, processes acting on behalf of users,
+    or devices.
+  standard_key: CMMC_ver1
+  covered_by: []
+  security_control_type: Assigned
+  narrative:
+  - text: >-
+      Personnel accessing the information system environment are uniquely identified
+      by their username and authenticated using Azure Active Directory. Authentication
+      to Azure Active Directory is required in order to access the information system.
+
+
+      Azure Active Directory assigns a unique identification and random temporary
+      password that meets policy requirements at the initial time of account creation.
+      Azure Active Directory maintains the unique identification associated with the
+      account throughout the life of the account. Account identification is never
+      repeated with Azure Active Directory.
+  remarks:
+  - text: ~
+- control_key: IA.1.077
+  control_name: Authenticate (or verify) the identities of those users, processes,
+    or devices, as a prerequisite to allowing access to organizational informatio  n
+    systems.
+  standard_key: CMMC_ver1
+  covered_by: []
+  security_control_type: Assigned
+  narrative:
+  - text: >-
+      Personnel accessing the information system environment are uniquely identified
+      by their username and authenticated using Azure Active Directory. Authentication
+      to Azure Active Directory is required in order to access the information system.
+
+
+      Azure Active Directory assigns a unique identification and random temporary
+      password that meets policy requirements at the initial time of account creation.
+      Azure Active Directory maintains the unique identification associated with the
+      account throughout the life of the account. Account identification is never
+      repeated with Azure Active Directory.
+  remarks:
+  - text: ~
+- control_key: IA.2.078
+  control_name: Enforce a minimum password complexity and change of characters when
+    new passwords are created.
+  standard_key: CMMC_ver1
+  covered_by: []
+  security_control_type: Assigned
+  narrative:
+  - text: >-
+      Azure Active Directory is used to ensure that all passwords are cryptographically
+      protected while stored and transmitted. Passwords stored by Azure Active Directory
+      and locally on deployed Windows virtual machines are automatically hashed as
+      part of built-in security functionality. Remote desktop authentication sessions
+      are secured using TLS to ensure authenticators are protected when transmitted.
+
+
+      Azure Active Directory is used to manage access to the information system. Whenever
+      an account is initially created, or a temporary password is generated, Azure
+      Active Directory is employed to require that the user change the password at
+      the next login.
+  remarks:
+  - text: ~
+- control_key: IA.2.079
+  control_name: Prohibit password reuse for a specified number of generations.
+  standard_key: CMMC_ver1
+  covered_by: []
+  security_control_type: Assigned
+  narrative:
+  - text: >-
+      Azure Active Directory is used to ensure that all passwords are cryptographically
+      protected while stored and transmitted. Passwords stored by Azure Active Directory
+      and locally on deployed Windows virtual machines are automatically hashed as
+      part of built-in security functionality. Remote desktop authentication sessions
+      are secured using TLS to ensure authenticators are protected when transmitted.
+
+
+      Azure Active Directory is used to manage access to the information system. Whenever
+      an account is initially created, or a temporary password is generated, Azure
+      Active Directory is employed to require that the user change the password at
+      the next login.
+  remarks:
+  - text: ~
+- control_key: IA.2.080
+  control_name: Allow temporary password use for system logons with an immediate change
+    to a permanent password.
+  standard_key: CMMC_ver1
+  covered_by: []
+  security_control_type: Assigned
+  narrative:
+  - text: >-
+      Azure Active Directory is used to ensure that all passwords are cryptographically
+      protected while stored and transmitted. Passwords stored by Azure Active Directory
+      and locally on deployed Windows virtual machines are automatically hashed as
+      part of built-in security functionality. Remote desktop authentication sessions
+      are secured using TLS to ensure authenticators are protected when transmitted.
+
+
+      Azure Active Directory is used to manage access to the information system. Whenever
+      an account is initially created, or a temporary password is generated, Azure
+      Active Directory is employed to require that the user change the password at
+      the next login.
+  remarks:
+  - text: ~
+- control_key: IA.2.081
+  control_name: Store and transmit only cryptographically-protected passwords.
+  standard_key: CMMC_ver1
+  covered_by: []
+  security_control_type: Assigned
+  narrative:
+  - text: >-
+      Azure Active Directory is used to ensure that all passwords are cryptographically
+      protected while stored and transmitted. Passwords stored by Azure Active Directory
+      and locally on deployed Windows virtual machines are automatically hashed as
+      part of built-in security functionality. Remote desktop authentication sessions
+      are secured using TLS to ensure authenticators are protected when transmitted.
+
+
+      Azure Active Directory is used to manage access to the information system. Whenever
+      an account is initially created, or a temporary password is generated, Azure
+      Active Directory is employed to require that the user change the password at
+      the next login.
+  remarks:
+  - text: ~
+- control_key: IA.3.084
+  control_name: Employ replay-resistant authentication mechanisms for network access
+    to privileged and non-privileged accounts.
+  standard_key: CMMC_ver1
+  covered_by: []
+  security_control_type: Assigned
+  narrative:
+  - text: >-
+      Access to the production environment is protected from replay attacks by the
+      built-in Kerberos functionality of Azure Active Directory. In Kerberos authentication,
+      the authenticator sent by the client contains additional data, such as an encrypted
+      IP list, client timestamps, and ticket lifetime. If a packet is replayed, the
+      timestamp is checked. If the timestamp is earlier than, or the same as a previous
+      authenticator, the packet is rejected.
+
+
+      All accounts are protected from replay attacks by the built-in Kerberos functionality
+      of Azure Active Directory. In Kerberos authentication, the authenticator sent
+      by the client contains additional data, such as an encrypted IP list, the client
+      timestamps, and the ticket lifetime. If a packet is replayed, the timestamp
+      is checked. If the timestamp is earlier than, or the same as a previous authenticator,
+      the packet is rejected.
+  remarks:
+  - text: ~
+- control_key: IA.3.085
+  control_name: Prevent the reuse of identifiers for a defined period.
+  standard_key: CMMC_ver1
+  covered_by: []
+  security_control_type: Assigned
+  narrative:
+  - text: >-
+      Azure Active Directory is the central account repository used to provide access
+      to the service environment. When accounts are created in Azure Active Directory,
+      the user's unique identifier is assigned to the individual.
+
+
+      Active Directory and local Windows operating system accounts are assigned a
+      unique security identifier (SID). Azure Active Directory accounts are assigned
+      a globally unique Object ID. These unique IDs are not subject to reuse.
+
+
+      All accounts within Azure Active Directory are configured to automatically be
+      disabled after 35 days of inactivity.
+  remarks:
+  - text: ~
+- control_key: IA.3.086
+  control_name: Disable identifiers after a defined period of inactivity.
+  standard_key: CMMC_ver1
+  covered_by: []
+  security_control_type: Assigned
+  narrative:
+  - text: >-
+      Azure Active Directory is the central account repository used to provide access
+      to the service environment. When accounts are created in Azure Active Directory,
+      the user's unique identifier is assigned to the individual.
+
+
+      Active Directory and local Windows operating system accounts are assigned a
+      unique security identifier (SID). Azure Active Directory accounts are assigned
+      a globally unique Object ID. These unique IDs are not subject to reuse.
+
+
+      All accounts within Azure Active Directory are configured to automatically be
+      disabled after 35 days of inactivity.
+  remarks:
+  - text: ~
+- control_key: IR.5.106
+  control_name: In response to cyber incidents, utilize forensic data gathering across
+    impacted systems, ensuring the secure transfer and protection of forensic data.
+  standard_key: CMMC_ver1
+  covered_by: []
+  security_control_type: Assigned
+  narrative:
+  - text: Access to audit functions is restricted using role-based access control
+      within Azure and at the virtual machine OS-level. The configuration of events
+      selected to be audited by resources deployed can be configured by users with
+      appropriate role-based authorization assigned within Azure Active Directory.
+  remarks:
+  - text: ~
+- control_key: SC-10
+  control_name: Network Disconnect
+  standard_key: Electronic Version of NIST SP 800-53 Rev 5 Controls and SP 800-53A Rev 5 Assessment Procedures
+  covered_by: []
+  security_control_type: Assigned
+  narrative:
+  - text: Authentication for Remote Desktop sessions is managed by Azure Active Directory.
+      Once access is disabled for a user in Azure Active Directory, remote sessions
+      are immediately terminated.
+  remarks:
+  - text: ''
+- control_key: SC-4
+  control_name: Information in Shared Resources
+  standard_key: Electronic Version of NIST SP 800-53 Rev 5 Controls and SP 800-53A Rev 5 Assessment Procedures
+  covered_by: []
+  security_control_type: Assigned
+  narrative:
+  - text: The virtual machines deployed by this architecture run Windows operating
+      systems. The operating system manages resources (e.g., memory, storage) such
+      that information is accessible only to users and roles with appropriate permissions,
+      assigned by Azure Active Directory.
+  remarks:
+  - text: ''
+- control_key: SC.3.182
+  control_name: Prevent unauthorized and unintended information transfer via shared
+    system resources.
+  standard_key: CMMC_ver1
+  covered_by: []
+  security_control_type: Assigned
+  narrative:
+  - text: The virtual machines deployed by this architecture run Windows operating
+      systems. The operating system manages resources (e.g., memory, storage) such
+      that information is accessible only to users and roles with appropriate permissions,
+      assigned by Azure Active Directory.
+  remarks:
+  - text: ~
+- control_key: SC.3.186
+  control_name: Terminate network connections associated with communications sessions
+    at the end of the sessions or after a defined period of inactivity.
+  standard_key: CMMC_ver1
+  covered_by: []
+  security_control_type: Assigned
+  narrative:
+  - text: Authentication for Remote Desktop sessions is managed by Azure Active Directory.
+      Once access is disabled for a user in Azure Active Directory, remote sessions
+      are immediately terminated.
+  remarks:
+  - text: ~

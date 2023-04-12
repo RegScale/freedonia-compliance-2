@@ -1,0 +1,8 @@
+Consolidated Audit Service
+Email Service
+Consolidated Database Service
+Network Service
+Identity Management Service
+DevSecOps CI/CD Service
+Artifact Repository Service
+Git Repository Service

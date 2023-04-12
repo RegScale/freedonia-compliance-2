@@ -10,3 +10,6 @@ tests/security-group-test-app/Godeps/_workspace/
 schemas/
 opencontrols
 .DS_Store
+
+settings.py
+output/

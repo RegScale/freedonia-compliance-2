@@ -1,0 +1,859 @@
+name: Microsoft Azure Active Directory (AD) Group Policy Objects (GPO)
+schema_version: 3.0.0
+documentation_complete: false
+satisfies:
+- control_key: AC-10
+  control_name: Concurrent Session Control
+  standard_key: Electronic Version of NIST SP 800-53 Rev 5 Controls and SP 800-53A Rev 5 Assessment Procedures
+  covered_by: []
+  security_control_type: Assigned
+  narrative:
+  - text: >-
+      A configuration-controlled group policy object (GPO) is applied to all customer-controlled
+      Windows machines within Azure. The group policy object is configured in accordance
+      with the CIS benchmark for Windows Server 2012 R2 and customized to meet organization
+      requirements, including restricting users to a single remote desktop services
+      session, which meets FedRAMP and DoD requirements. (ref. CIS benchmark section
+      18.9.48.3.2).
+
+
+      A configuration-controlled group policy object (GPO) is applied to all customer-controlled
+      Windows machines within Azure. The group policy object is customized to meet
+      organization requirements, including restricting users to a single remote desktop
+      services session, which meets FedRAMP and DoD requirements.
+  remarks:
+  - text: ''
+- control_key: AC-11
+  control_name: Session Lock
+  standard_key: Electronic Version of NIST SP 800-53 Rev 5 Controls and SP 800-53A Rev 5 Assessment Procedures
+  covered_by: []
+  security_control_type: Assigned
+  narrative:
+  - text: A configuration-controlled group policy object (GPO) is applied to all customer-controlled
+      Windows machines within Azure. The group policy object is customized to meet
+      organization requirements, including initiating a session lock after 900 seconds
+      (15 minutes) of inactivity that is retained until the user re-authenticates.
+  remarks:
+  - text: ''
+- control_key: AC-11
+  control_name: Session Lock
+  standard_key: Electronic Version of NIST SP 800-53 Rev 5 Controls and SP 800-53A Rev 5 Assessment Procedures
+  covered_by: []
+  security_control_type: Assigned
+  narrative:
+  - text: A configuration-controlled group policy object (GPO) is applied to all customer-controlled
+      Windows machines within Azure. The group policy object is configured in accordance
+      with the CIS benchmark for Windows Server 2012 R2 and customized to meet organization
+      requirements, including initiating a session lock after 900 seconds (15 minutes)
+      of inactivity that is retained until the user re-authenticates (ref. CIS benchmark
+      sections 2.3.7.3, 19.1.3.1, 19.1.3.3). Users may manually initiate the inactivity
+      session lock.
+  remarks:
+  - text: ''
+- control_key: AC-12
+  control_name: Session Termination
+  standard_key: Electronic Version of NIST SP 800-53 Rev 5 Controls and SP 800-53A Rev 5 Assessment Procedures
+  covered_by: []
+  security_control_type: Assigned
+  narrative:
+  - text: >-
+      A configuration-controlled group policy object (GPO) is applied to all customer-controlled
+      Windows machines within Azure. The group policy object is configured with organization-defined
+      requirements. Users may manually initiate a session termination.
+
+
+      Windows automatically terminates remote desktop sessions upon receiving a logout
+      request from the customer user. Additionally, a configuration-controlled group
+      policy object (GPO) is applied to all customer-controlled Windows machines within
+      Azure. The group policy object is customized to meet organization requirements,
+      including terminating a remote desktop session after 900 seconds (15 minutes)
+      of inactivity.
+  remarks:
+  - text: ''
+- control_key: AC-17.3
+  control_name: Managed Access Control Points
+  standard_key: Electronic Version of NIST SP 800-53 Rev 5 Controls and SP 800-53A Rev 5 Assessment Procedures
+  covered_by: []
+  security_control_type: Assigned
+  narrative:
+  - text: Remote access to customer-controlled components of the information system
+      within Azure is restricted to two managed network access control points. 1)
+      Internet traffic designated for the web application is managed through an Internet-facing
+      load balancer, which distributes traffic to web-tier resources. 2) Management
+      remote access is managed through a bastion host on a segregated subnet within
+      the environment. The network security group applied to the management subnet,
+      in which the jumpbox resides, allows connections only from whitelisted public
+      IP addresses and is restricted to remote desktop traffic only.
+  remarks:
+  - text: ''
+- control_key: AC-3
+  control_name: Access Enforcement
+  standard_key: Electronic Version of NIST SP 800-53 Rev 5 Controls and SP 800-53A Rev 5 Assessment Procedures
+  covered_by: []
+  security_control_type: Assigned
+  narrative:
+  - text: Azure Active Directory enforces approved authorizations to the Customer
+      environment using role-based access control. Azure Active Directory roles assigned
+      to users or groups control logical access to resources within Azure at the resource,
+      group, or subscription level. Active Directory security groups control logical
+      access to OS-level resources and functions. Access to Azure Active Directory
+      security groups is managed by Security Group Administrators. Users are placed
+      in appropriate security groups according to their roles, using the principle
+      of least privilege.
+  remarks:
+  - text: ''
+- control_key: AC-6.9
+  control_name: Auditing Use of Privileged Functions
+  standard_key: Electronic Version of NIST SP 800-53 Rev 5 Controls and SP 800-53A Rev 5 Assessment Procedures
+  covered_by: []
+  security_control_type: Assigned
+  narrative:
+  - text: A configuration-controlled group policy object (GPO) is applied to all customer-controlled
+      Windows machines within Azure. The group policy object is customized to meet
+      organization requirements, including auditing for the execution of privileged
+      functions.
+  remarks:
+  - text: ''
+- control_key: AC-7
+  control_name: Unsuccessful Logon Attempts
+  standard_key: Electronic Version of NIST SP 800-53 Rev 5 Controls and SP 800-53A Rev 5 Assessment Procedures
+  covered_by: []
+  security_control_type: Assigned
+  narrative:
+  - text: >-
+      A configuration-controlled group policy object (GPO) is applied to all customer-controlled
+      Windows machines within Azure. The group policy object is configured in accordance
+      with the CIS benchmark for Windows Server 2012 R2 and customized to meet organization
+      requirements, including initiating an account lock after consecutive failed
+      logon attempts (ref. CIS benchmark sections 1.2.1, 1.2.2, 1.2.3; note: CIS benchmark
+      default values must be changed to meet FedRAMP and DoD parameter requirements).
+
+
+      A configuration-controlled group policy object (GPO) is applied to all customer-controlled
+      Windows machines within Azure. The group policy object is customized to meet
+      organization requirements, including initiating an account lock after consecutive
+      failed logon attempts.
+  remarks:
+  - text: ''
+- control_key: AC-8
+  control_name: System Use Notification
+  standard_key: Electronic Version of NIST SP 800-53 Rev 5 Controls and SP 800-53A Rev 5 Assessment Procedures
+  covered_by: []
+  security_control_type: Assigned
+  narrative:
+  - text: A configuration-controlled group policy object (GPO) is applied to all customer-controlled
+      Windows machines within Azure. The group policy object is configured in accordance
+      with the CIS benchmark for Windows Server 2012 R2 and customized to meet organization
+      requirements, including the use of an appropriate system use notification, which
+      users must acknowledge prior to logon (ref. CIS benchmark sections 2.3.7.4,
+      2.3.7.5).
+  remarks:
+  - text: ''
+- control_key: AC.1.001
+  control_name: Limit information system access to authorized users, processes acting
+    on behalf of authorized users, or devices (including other information systems).
+  standard_key: CMMC_ver1
+  covered_by: []
+  security_control_type: Assigned
+  narrative:
+  - text: Azure Active Directory enforces approved authorizations to the Customer
+      environment using role-based access control. Azure Active Directory roles assigned
+      to users or groups control logical access to resources within Azure at the resource,
+      group, or subscription level. Active Directory security groups control logical
+      access to OS-level resources and functions. Access to Azure Active Directory
+      security groups is managed by Security Group Administrators. Users are placed
+      in appropriate security groups according to their roles, using the principle
+      of least privilege.
+  remarks:
+  - text: ~
+- control_key: AC.1.002
+  control_name: Limit information system access to the types of transactions and functions
+    that authorized users are permitted to execute.
+  standard_key: CMMC_ver1
+  covered_by: []
+  security_control_type: Assigned
+  narrative:
+  - text: Azure Active Directory enforces approved authorizations to the Customer
+      environment using role-based access control. Azure Active Directory roles assigned
+      to users or groups control logical access to resources within Azure at the resource,
+      group, or subscription level. Active Directory security groups control logical
+      access to OS-level resources and functions. Access to Azure Active Directory
+      security groups is managed by Security Group Administrators. Users are placed
+      in appropriate security groups according to their roles, using the principle
+      of least privilege.
+  remarks:
+  - text: ~
+- control_key: AC.2.005
+  control_name: Provide privacy and security notices consistent with applicable CUI
+    rules.
+  standard_key: CMMC_ver1
+  covered_by: []
+  security_control_type: Assigned
+  narrative:
+  - text: A configuration-controlled group policy object (GPO) is applied to all customer-controlled
+      Windows machines within Azure. The group policy object is configured in accordance
+      with the CIS benchmark for Windows Server 2012 R2 and customized to meet organization
+      requirements, including the use of an appropriate system use notification, which
+      users must acknowledge prior to logon (ref. CIS benchmark sections 2.3.7.4,
+      2.3.7.5).
+  remarks:
+  - text: ~
+- control_key: AC.2.009
+  control_name: Limit unsuccessful logon attempts.
+  standard_key: CMMC_ver1
+  covered_by: []
+  security_control_type: Assigned
+  narrative:
+  - text: >-
+      A configuration-controlled group policy object (GPO) is applied to all customer-controlled
+      Windows machines within Azure. The group policy object is configured in accordance
+      with the CIS benchmark for Windows Server 2012 R2 and customized to meet organization
+      requirements, including initiating an account lock after consecutive failed
+      logon attempts (ref. CIS benchmark sections 1.2.1, 1.2.2, 1.2.3; note: CIS benchmark
+      default values must be changed to meet FedRAMP and DoD parameter requirements).
+
+
+      A configuration-controlled group policy object (GPO) is applied to all customer-controlled
+      Windows machines within Azure. The group policy object is customized to meet
+      organization requirements, including initiating an account lock after consecutive
+      failed logon attempts.
+  remarks:
+  - text: ~
+- control_key: AC.2.010
+  control_name: Use session lock with pattern-hiding displays to prevent access and
+    viewing of data after a period of inactivity.
+  standard_key: CMMC_ver1
+  covered_by: []
+  security_control_type: Assigned
+  narrative:
+  - text: >-
+      A configuration-controlled group policy object (GPO) is applied to all customer-controlled
+      Windows machines within Azure. The group policy object is configured in accordance
+      with the CIS benchmark for Windows Server 2012 R2 and customized to meet organization
+      requirements, including initiating a session lock after 900 seconds (15 minutes)
+      of inactivity that is retained until the user re-authenticates (ref. CIS benchmark
+      sections 2.3.7.3, 19.1.3.1, 19.1.3.3). Users may manually initiate the inactivity
+      session lock.
+
+
+      A configuration-controlled group policy object (GPO) is applied to all customer-controlled
+      Windows machines within Azure. The group policy object is customized to meet
+      organization requirements, including initiating a session lock after 900 seconds
+      (15 minutes) of inactivity that is retained until the user re-authenticates.
+  remarks:
+  - text: ~
+- control_key: AC.2.015
+  control_name: Route remote access via managed access control points.
+  standard_key: CMMC_ver1
+  covered_by: []
+  security_control_type: Assigned
+  narrative:
+  - text: Remote access to customer-controlled components of the information system
+      within Azure is restricted to two managed network access control points. 1)
+      Internet traffic designated for the web application is managed through an Internet-facing
+      load balancer, which distributes traffic to web-tier resources. 2) Management
+      remote access is managed through a bastion host on a segregated subnet within
+      the environment. The network security group applied to the management subnet,
+      in which the jumpbox resides, allows connections only from whitelisted public
+      IP addresses and is restricted to remote desktop traffic only.
+  remarks:
+  - text: ~
+- control_key: AC.3.018
+  control_name: Prevent non-privileged users from executing privileged functions and
+    capture the execution of such functions in audit logs.
+  standard_key: CMMC_ver1
+  covered_by: []
+  security_control_type: Assigned
+  narrative:
+  - text: A configuration-controlled group policy object (GPO) is applied to all customer-controlled
+      Windows machines within Azure. The group policy object is customized to meet
+      organization requirements, including auditing for the execution of privileged
+      functions.
+  remarks:
+  - text: ~
+- control_key: AC.3.019
+  control_name: Terminate (automatically) user sessions after a defined condition.
+  standard_key: CMMC_ver1
+  covered_by: []
+  security_control_type: Assigned
+  narrative:
+  - text: >-
+      A configuration-controlled group policy object (GPO) is applied to all customer-controlled
+      Windows machines within Azure. The group policy object is configured with organization-defined
+      requirements. Users may manually initiate a session termination.
+
+
+      Windows automatically terminates remote desktop sessions upon receiving a logout
+      request from the customer user. Additionally, a configuration-controlled group
+      policy object (GPO) is applied to all customer-controlled Windows machines within
+      Azure. The group policy object is customized to meet organization requirements,
+      including terminating a remote desktop session after 900 seconds (15 minutes)
+      of inactivity.
+  remarks:
+  - text: ~
+- control_key: AU-9.2
+  control_name: Audit Backup On Separate Physical Systems / Components
+  standard_key: Electronic Version of NIST SP 800-53 Rev 5 Controls and SP 800-53A Rev 5 Assessment Procedures
+  covered_by: []
+  security_control_type: Assigned
+  narrative:
+  - text: Microsoft's Operation Management Suite (OMS) is used with the Security and
+      Audit solution as well as Azure Backup to backup audit logs to Azure which then
+      replicates data in order to provide data reliability and availability. Data
+      is collected by OMS in near real-time. Azure Backup provides a secure place
+      for audit logs to be stored on a system other than the one being audited.
+  remarks:
+  - text: ''
+- control_key: CA-3.5
+  control_name: Restrictions On External System Connections
+  standard_key: Electronic Version of NIST SP 800-53 Rev 5 Controls and SP 800-53A Rev 5 Assessment Procedures
+  covered_by: []
+  security_control_type: Assigned
+  narrative:
+  - text: All outbound communication originating from customer-controlled resources
+      in Azure is restricted through implementation of network security groups that
+      are configured with an outbound ruleset that denies all traffic except that
+      explicitly allowed in order to support information system functionality, which
+      meets FedRAMP and DoD L4 requirements. Further, user defined routes are configured
+      to route all outbound traffic through a virtual firewall appliance, which is
+      configured with a ruleset allowing communication with only approved external
+      information systems.
+  remarks:
+  - text: ''
+- control_key: CM-6
+  control_name: Configuration Settings
+  standard_key: Electronic Version of NIST SP 800-53 Rev 5 Controls and SP 800-53A Rev 5 Assessment Procedures
+  covered_by: []
+  security_control_type: Assigned
+  narrative:
+  - text: A configuration-controlled group policy object (GPO) is maintained for all
+      customer-controlled Windows machines within Azure. The group policy object is
+      configured in accordance with the CIS benchmark for Windows Server 2012 R2 and
+      customized to meet organization requirements specific to the operational needs
+      of the system. This group policy object is established, in addition to other
+      configuration resources, to document and ensure consistent implementation of
+      configuration settings.
+  remarks:
+  - text: ''
+- control_key: CM-7
+  control_name: Least Functionality
+  standard_key: Electronic Version of NIST SP 800-53 Rev 5 Controls and SP 800-53A Rev 5 Assessment Procedures
+  covered_by: []
+  security_control_type: Assigned
+  narrative:
+  - text: A configuration-controlled group policy object (GPO) is maintained for all
+      customer-controlled Windows machines within Azure. The group policy object is
+      configured in accordance with the CIS benchmark for Windows Server 2012 R2 and
+      customized to meet organization requirements specific to the operational needs
+      of the system. The group policy object is used to establish a baseline virtual
+      machine image, which is maintained for all Windows machines within Azure and
+      reflects the configuration of Windows machines to provide only the capabilities
+      essential for operation of the system.
+  remarks:
+  - text: ''
+- control_key: CM.2.061
+  control_name: Establish and maintain baseline configurations and inventories of
+    organizational systems (including hardware, software, firmware, and documentation)     throughout
+    the respective system development life cycles.
+  standard_key: CMMC_ver1
+  covered_by: []
+  security_control_type: Assigned
+  narrative:
+  - text: A configuration-controlled group policy object (GPO) is maintained for all
+      customer-controlled Windows machines within Azure. The group policy object is
+      configured in accordance with the CIS benchmark for Windows Server 2012 R2 and
+      customized to meet organization requirements specific to the operational needs
+      of the system. This group policy object is established, in addition to other
+      configuration resources, to document and ensure consistent implementation of
+      configuration settings.
+  remarks:
+  - text: ~
+- control_key: CM.2.062
+  control_name: Employ the principle of least functionality by configuring organizational
+    systems to provide only essential capabilities.
+  standard_key: CMMC_ver1
+  covered_by: []
+  security_control_type: Assigned
+  narrative:
+  - text: A configuration-controlled group policy object (GPO) is maintained for all
+      customer-controlled Windows machines within Azure. The group policy object is
+      configured in accordance with the CIS benchmark for Windows Server 2012 R2 and
+      customized to meet organization requirements specific to the operational needs
+      of the system. The group policy object is used to establish a baseline virtual
+      machine image, which is maintained for all Windows machines within Azure and
+      reflects the configuration of Windows machines to provide only the capabilities
+      essential for operation of the system.
+  remarks:
+  - text: ~
+- control_key: CM.2.064
+  control_name: Establish and enforce security configuration settings for information
+    technology products employed in organizational systems.
+  standard_key: CMMC_ver1
+  covered_by: []
+  security_control_type: Assigned
+  narrative:
+  - text: A configuration-controlled group policy object (GPO) is maintained for all
+      customer-controlled Windows machines within Azure. The group policy object is
+      configured in accordance with the CIS benchmark for Windows Server 2012 R2 and
+      customized to meet organization requirements specific to the operational needs
+      of the system. This group policy object is established, in addition to other
+      configuration resources, to document and ensure consistent implementation of
+      configuration settings.
+  remarks:
+  - text: ~
+- control_key: CP-7
+  control_name: Alternate Processing Site
+  standard_key: Electronic Version of NIST SP 800-53 Rev 5 Controls and SP 800-53A Rev 5 Assessment Procedures
+  covered_by: []
+  security_control_type: Assigned
+  narrative:
+  - text: The Azure Site Recovery Services vault is used to manage processing of alternate
+      site storage. A Backup and Site Recovery policy is established, configuring
+      services to continue in an alternate region using Azure geo-redundant storage
+      (GRS). Azure provides a geographically separated datacenter that provisions
+      identical security implementations allowing for the correct priority of service,
+      and reduction in geographical threats.
+  remarks:
+  - text: ''
+- control_key: CP-7.1
+  control_name: Separation from Primary Site
+  standard_key: Electronic Version of NIST SP 800-53 Rev 5 Controls and SP 800-53A Rev 5 Assessment Procedures
+  covered_by: []
+  security_control_type: Assigned
+  narrative:
+  - text: The Azure Site Recovery Services vault is used to manage processing of alternate
+      site storage. A Backup and Site Recovery policy is established, configuring
+      services to continue in an alternate region using Azure geo-redundant storage
+      (GRS). Azure provides a geographically separated datacenter that provisions
+      identical security implementations allowing for the correct priority of service,
+      and reduction in geographical threats.
+  remarks:
+  - text: ''
+- control_key: CP-7.3
+  control_name: Priority of Service
+  standard_key: Electronic Version of NIST SP 800-53 Rev 5 Controls and SP 800-53A Rev 5 Assessment Procedures
+  covered_by: []
+  security_control_type: Assigned
+  narrative:
+  - text: The Azure Site Recovery Services vault is used to manage processing of alternate
+      site storage. A Backup and Site Recovery policy is established, configuring
+      services to continue in an alternate region using Azure geo-redundant storage
+      (GRS). Azure provides a geographically separated datacenter that provisions
+      identical security implementations allowing for the correct priority of service,
+      and reduction in geographical threats.
+  remarks:
+  - text: ''
+- control_key: CP-7.4
+  control_name: Preparation for Use
+  standard_key: Electronic Version of NIST SP 800-53 Rev 5 Controls and SP 800-53A Rev 5 Assessment Procedures
+  covered_by: []
+  security_control_type: Assigned
+  narrative:
+  - text: The Azure Site Recovery Services vault is used to manage processing of alternate
+      site storage. A Backup and Site Recovery policy is established, configuring
+      services to continue in an alternate region using Azure geo-redundant storage
+      (GRS). Azure provides a geographically separated datacenter that provisions
+      identical security implementations allowing for the correct priority of service,
+      and reduction in geographical threats.
+  remarks:
+  - text: ''
+- control_key: CP-9.1
+  control_name: Testing for Reliability / Integrity
+  standard_key: Electronic Version of NIST SP 800-53 Rev 5 Controls and SP 800-53A Rev 5 Assessment Procedures
+  covered_by: []
+  security_control_type: Assigned
+  narrative:
+  - text: Azure Recovery Services Vault uses online storage; there is no customer
+      backup media within the scope of systems deployed on Azure.
+  remarks:
+  - text: ''
+- control_key: IA-5
+  control_name: Authenticator Management
+  standard_key: Electronic Version of NIST SP 800-53 Rev 5 Controls and SP 800-53A Rev 5 Assessment Procedures
+  covered_by: []
+  security_control_type: Assigned
+  narrative:
+  - text: 'A configuration-controlled group policy object (GPO) is applied to all
+      customer-controlled Windows machines within Azure. The group policy object is
+      configured in accordance with the CIS benchmark for Windows Server 2012 R2 and
+      customized to meet organization requirements, including restrictions on local
+      account passwords that enforce minimum (1 day) and maximum (60 days) lifetime
+      restrictions, reuse conditions (24 passwords), length (14 characters), and complexity
+      requirements, which meet FedRAMP requirements (ref. CIS benchmark sections 1.1.1,
+      1.1.2., 1.1.3., 1.1.4, 1.1.5; note: CIS benchmark default values must be changed
+      to meet DoD parameter requirements).'
+  remarks:
+  - text: ''
+- control_key: IA-5
+  control_name: Authenticator Management
+  standard_key: Electronic Version of NIST SP 800-53 Rev 5 Controls and SP 800-53A Rev 5 Assessment Procedures
+  covered_by: []
+  security_control_type: Assigned
+  narrative:
+  - text: A configuration-controlled group policy object (GPO) is applied to all customer-controlled
+      Windows machines within Azure. The group policy object is customized to meet
+      organization requirements, including restrictions on local account passwords
+      that enforce maximum (60 days) lifetime restrictions, which meet FedRAMP requirements.
+  remarks:
+  - text: ''
+- control_key: IA-5
+  control_name: Authenticator Management
+  standard_key: Electronic Version of NIST SP 800-53 Rev 5 Controls and SP 800-53A Rev 5 Assessment Procedures
+  covered_by: []
+  security_control_type: Assigned
+  narrative:
+  - text: A configuration-controlled group policy object (GPO) is applied to all customer-controlled
+      Windows machines within Azure. The group policy object is customized to meet
+      organization requirements, including restrictions on local account passwords
+      that enforce minimum (1 day) and maximum (60 days) lifetime restrictions, reuse
+      conditions (24 passwords), length (14 characters), and complexity requirements,
+      which meet FedRAMP requirements.
+  remarks:
+  - text: ''
+- control_key: IA-5.1
+  control_name: Password-based Authentication
+  standard_key: Electronic Version of NIST SP 800-53 Rev 5 Controls and SP 800-53A Rev 5 Assessment Procedures
+  covered_by: []
+  security_control_type: Assigned
+  narrative:
+  - text: A configuration-controlled group policy object (GPO) is applied to all customer-controlled
+      Windows machines within Azure. The group policy object is customized to meet
+      organization requirements, including complexity requirements, which meet FedRAMP
+      requirements.
+  remarks:
+  - text: ''
+- control_key: IA-5.1
+  control_name: Password-based Authentication
+  standard_key: Electronic Version of NIST SP 800-53 Rev 5 Controls and SP 800-53A Rev 5 Assessment Procedures
+  covered_by: []
+  security_control_type: Assigned
+  narrative:
+  - text: A configuration-controlled group policy object (GPO) is applied to all customer-controlled
+      Windows machines within Azure. The group policy object is customized to meet
+      organization requirements, including complexity requirements, which meet FedRAMP
+      requirements.
+  remarks:
+  - text: ''
+- control_key: IA-5.1
+  control_name: Password-based Authentication
+  standard_key: Electronic Version of NIST SP 800-53 Rev 5 Controls and SP 800-53A Rev 5 Assessment Procedures
+  covered_by: []
+  security_control_type: Assigned
+  narrative:
+  - text: A configuration-controlled group policy object (GPO) is applied to all customer-controlled
+      Windows machines within Azure. The group policy object is customized to meet
+      organization requirements, including restrictions on reuse conditions (24 passwords),
+      which meet FedRAMP requirements.
+  remarks:
+  - text: ''
+- control_key: IA-5.1
+  control_name: Password-based Authentication
+  standard_key: Electronic Version of NIST SP 800-53 Rev 5 Controls and SP 800-53A Rev 5 Assessment Procedures
+  covered_by: []
+  security_control_type: Assigned
+  narrative:
+  - text: A configuration-controlled group policy object (GPO) is applied to all customer-controlled
+      Windows machines within Azure. The group policy object is customized to meet
+      organization requirements, including restrictions on local account passwords
+      that enforce minimum (1 day) and maximum (60 days) lifetime restrictions, which
+      meet FedRAMP requirements.
+  remarks:
+  - text: ''
+- control_key: IA.1.076
+  control_name: Identify information system users, processes acting on behalf of users,
+    or devices.
+  standard_key: CMMC_ver1
+  covered_by: []
+  security_control_type: Assigned
+  narrative:
+  - text: >-
+      A configuration-controlled group policy object (GPO) is applied to all customer-controlled
+      Windows machines within Azure. The group policy object is customized to meet
+      organization requirements, including restrictions on local account passwords
+      that enforce maximum (60 days) lifetime restrictions, which meet FedRAMP requirements.
+
+
+      A configuration-controlled group policy object (GPO) is applied to all customer-controlled
+      Windows machines within Azure. The group policy object is customized to meet
+      organization requirements, including restrictions on local account passwords
+      that enforce minimum (1 day) and maximum (60 days) lifetime restrictions, reuse
+      conditions (24 passwords), length (14 characters), and complexity requirements,
+      which meet FedRAMP requirements.
+
+
+      A configuration-controlled group policy object (GPO) is applied to all customer-controlled
+      Windows machines within Azure. The group policy object is configured in accordance
+      with the CIS benchmark for Windows Server 2012 R2 and customized to meet organization
+      requirements, including restrictions on local account passwords that enforce
+      minimum (1 day) and maximum (60 days) lifetime restrictions, reuse conditions
+      (24 passwords), length (14 characters), and complexity requirements, which meet
+      FedRAMP requirements (ref. CIS benchmark sections 1.1.1, 1.1.2., 1.1.3., 1.1.4,
+      1.1.5; note: CIS benchmark default values must be changed to meet DoD parameter
+      requirements).
+  remarks:
+  - text: ~
+- control_key: IA.1.077
+  control_name: Authenticate (or verify) the identities of those users, processes,
+    or devices, as a prerequisite to allowing access to organizational informatio  n
+    systems.
+  standard_key: CMMC_ver1
+  covered_by: []
+  security_control_type: Assigned
+  narrative:
+  - text: >-
+      A configuration-controlled group policy object (GPO) is applied to all customer-controlled
+      Windows machines within Azure. The group policy object is customized to meet
+      organization requirements, including restrictions on local account passwords
+      that enforce maximum (60 days) lifetime restrictions, which meet FedRAMP requirements.
+
+
+      A configuration-controlled group policy object (GPO) is applied to all customer-controlled
+      Windows machines within Azure. The group policy object is customized to meet
+      organization requirements, including restrictions on local account passwords
+      that enforce minimum (1 day) and maximum (60 days) lifetime restrictions, reuse
+      conditions (24 passwords), length (14 characters), and complexity requirements,
+      which meet FedRAMP requirements.
+
+
+      A configuration-controlled group policy object (GPO) is applied to all customer-controlled
+      Windows machines within Azure. The group policy object is configured in accordance
+      with the CIS benchmark for Windows Server 2012 R2 and customized to meet organization
+      requirements, including restrictions on local account passwords that enforce
+      minimum (1 day) and maximum (60 days) lifetime restrictions, reuse conditions
+      (24 passwords), length (14 characters), and complexity requirements, which meet
+      FedRAMP requirements (ref. CIS benchmark sections 1.1.1, 1.1.2., 1.1.3., 1.1.4,
+      1.1.5; note: CIS benchmark default values must be changed to meet DoD parameter
+      requirements).
+  remarks:
+  - text: ~
+- control_key: IA.2.078
+  control_name: Enforce a minimum password complexity and change of characters when
+    new passwords are created.
+  standard_key: CMMC_ver1
+  covered_by: []
+  security_control_type: Assigned
+  narrative:
+  - text: >-
+      A configuration-controlled group policy object (GPO) is applied to all customer-controlled
+      Windows machines within Azure. The group policy object is customized to meet
+      organization requirements, including restrictions on local account passwords
+      that enforce minimum (1 day) and maximum (60 days) lifetime restrictions, which
+      meet FedRAMP requirements.
+
+
+      A configuration-controlled group policy object (GPO) is applied to all customer-controlled
+      Windows machines within Azure. The group policy object is customized to meet
+      organization requirements, including restrictions on reuse conditions (24 passwords),
+      which meet FedRAMP requirements.
+
+
+      A configuration-controlled group policy object (GPO) is applied to all customer-controlled
+      Windows machines within Azure. The group policy object is customized to meet
+      organization requirements, including complexity requirements, which meet FedRAMP
+      requirements.
+
+
+      A configuration-controlled group policy object (GPO) is applied to all customer-controlled
+      Windows machines within Azure. The group policy object is customized to meet
+      organization requirements, including complexity requirements, which meet FedRAMP
+      requirements.
+  remarks:
+  - text: ~
+- control_key: IA.2.079
+  control_name: Prohibit password reuse for a specified number of generations.
+  standard_key: CMMC_ver1
+  covered_by: []
+  security_control_type: Assigned
+  narrative:
+  - text: >-
+      A configuration-controlled group policy object (GPO) is applied to all customer-controlled
+      Windows machines within Azure. The group policy object is customized to meet
+      organization requirements, including restrictions on local account passwords
+      that enforce minimum (1 day) and maximum (60 days) lifetime restrictions, which
+      meet FedRAMP requirements.
+
+
+      A configuration-controlled group policy object (GPO) is applied to all customer-controlled
+      Windows machines within Azure. The group policy object is customized to meet
+      organization requirements, including restrictions on reuse conditions (24 passwords),
+      which meet FedRAMP requirements.
+
+
+      A configuration-controlled group policy object (GPO) is applied to all customer-controlled
+      Windows machines within Azure. The group policy object is customized to meet
+      organization requirements, including complexity requirements, which meet FedRAMP
+      requirements.
+
+
+      A configuration-controlled group policy object (GPO) is applied to all customer-controlled
+      Windows machines within Azure. The group policy object is customized to meet
+      organization requirements, including complexity requirements, which meet FedRAMP
+      requirements.
+  remarks:
+  - text: ~
+- control_key: IA.2.080
+  control_name: Allow temporary password use for system logons with an immediate change
+    to a permanent password.
+  standard_key: CMMC_ver1
+  covered_by: []
+  security_control_type: Assigned
+  narrative:
+  - text: >-
+      A configuration-controlled group policy object (GPO) is applied to all customer-controlled
+      Windows machines within Azure. The group policy object is customized to meet
+      organization requirements, including restrictions on local account passwords
+      that enforce minimum (1 day) and maximum (60 days) lifetime restrictions, which
+      meet FedRAMP requirements.
+
+
+      A configuration-controlled group policy object (GPO) is applied to all customer-controlled
+      Windows machines within Azure. The group policy object is customized to meet
+      organization requirements, including restrictions on reuse conditions (24 passwords),
+      which meet FedRAMP requirements.
+
+
+      A configuration-controlled group policy object (GPO) is applied to all customer-controlled
+      Windows machines within Azure. The group policy object is customized to meet
+      organization requirements, including complexity requirements, which meet FedRAMP
+      requirements.
+
+
+      A configuration-controlled group policy object (GPO) is applied to all customer-controlled
+      Windows machines within Azure. The group policy object is customized to meet
+      organization requirements, including complexity requirements, which meet FedRAMP
+      requirements.
+  remarks:
+  - text: ~
+- control_key: IA.2.081
+  control_name: Store and transmit only cryptographically-protected passwords.
+  standard_key: CMMC_ver1
+  covered_by: []
+  security_control_type: Assigned
+  narrative:
+  - text: >-
+      A configuration-controlled group policy object (GPO) is applied to all customer-controlled
+      Windows machines within Azure. The group policy object is customized to meet
+      organization requirements, including restrictions on local account passwords
+      that enforce minimum (1 day) and maximum (60 days) lifetime restrictions, which
+      meet FedRAMP requirements.
+
+
+      A configuration-controlled group policy object (GPO) is applied to all customer-controlled
+      Windows machines within Azure. The group policy object is customized to meet
+      organization requirements, including restrictions on reuse conditions (24 passwords),
+      which meet FedRAMP requirements.
+
+
+      A configuration-controlled group policy object (GPO) is applied to all customer-controlled
+      Windows machines within Azure. The group policy object is customized to meet
+      organization requirements, including complexity requirements, which meet FedRAMP
+      requirements.
+
+
+      A configuration-controlled group policy object (GPO) is applied to all customer-controlled
+      Windows machines within Azure. The group policy object is customized to meet
+      organization requirements, including complexity requirements, which meet FedRAMP
+      requirements.
+  remarks:
+  - text: ~
+- control_key: SI-3
+  control_name: Malicious Code Protection
+  standard_key: Electronic Version of NIST SP 800-53 Rev 5 Controls and SP 800-53A Rev 5 Assessment Procedures
+  covered_by: []
+  security_control_type: Assigned
+  narrative:
+  - text: Host-based antimalware protections for customer-controlled Windows virtual
+      machines in Azure are implemented using the Microsoft Antimalware virtual machine
+      extension. This extension is configured to perform heuristic detection, perform
+      both real-time and periodic scans (weekly), automatically update both the antimalware
+      engine and protection signatures as releases become available, perform automatic
+      remediation actions, and provide notifications through Azure Diagnostics.
+  remarks:
+  - text: ''
+- control_key: SI-3.1
+  control_name: Central Management
+  standard_key: Electronic Version of NIST SP 800-53 Rev 5 Controls and SP 800-53A Rev 5 Assessment Procedures
+  covered_by: []
+  security_control_type: Assigned
+  narrative:
+  - text: Host-based antimalware protections for customer-controlled Windows virtual
+      machines in Azure are implemented using the Microsoft Antimalware virtual machine
+      extension. This extension is configured to perform heuristic detection, perform
+      both real-time and periodic scans (weekly), automatically update both the antimalware
+      engine and protection signatures as releases become available, perform automatic
+      remediation actions, and provide notifications through Azure Diagnostics.
+  remarks:
+  - text: ''
+- control_key: SI-3.2
+  control_name: Automatic Updates
+  standard_key: Electronic Version of NIST SP 800-53 Rev 5 Controls and SP 800-53A Rev 5 Assessment Procedures
+  covered_by: []
+  security_control_type: Assigned
+  narrative:
+  - text: Host-based antimalware protections for customer-controlled Windows virtual
+      machines in Azure are implemented using the Microsoft Antimalware virtual machine
+      extension. This extension is configured to perform heuristic detection, perform
+      both real-time and periodic scans (weekly), automatically update both the antimalware
+      engine and protection signatures as releases become available, perform automatic
+      remediation actions, and provide notifications through Azure Diagnostics.
+  remarks:
+  - text: ''
+- control_key: SI-3.7
+  control_name: Nonsignature-based Detection
+  standard_key: Electronic Version of NIST SP 800-53 Rev 5 Controls and SP 800-53A Rev 5 Assessment Procedures
+  covered_by: []
+  security_control_type: Assigned
+  narrative:
+  - text: Host-based antimalware protections for customer-controlled Windows virtual
+      machines in Azure are implemented using the Microsoft Antimalware virtual machine
+      extension. This extension is configured to perform heuristic detection, perform
+      both real-time and periodic scans (weekly), automatically update both the antimalware
+      engine and protection signatures as releases become available, perform automatic
+      remediation actions, and provide notifications through Azure Diagnostics.
+  remarks:
+  - text: ''
+- control_key: SI.1.211
+  control_name: Provide protection from malicious code at appropriate locations within
+    organizational information systems.
+  standard_key: CMMC_ver1
+  covered_by: []
+  security_control_type: Assigned
+  narrative:
+  - text: Host-based antimalware protections for customer-controlled Windows virtual
+      machines in Azure are implemented using the Microsoft Antimalware virtual machine
+      extension. This extension is configured to perform heuristic detection, perform
+      both real-time and periodic scans (weekly), automatically update both the antimalware
+      engine and protection signatures as releases become available, perform automatic
+      remediation actions, and provide notifications through Azure Diagnostics.
+  remarks:
+  - text: ~
+- control_key: SI.1.212
+  control_name: Update malicious code protection mechanisms when new releases are
+    available.
+  standard_key: CMMC_ver1
+  covered_by: []
+  security_control_type: Assigned
+  narrative:
+  - text: Host-based antimalware protections for customer-controlled Windows virtual
+      machines in Azure are implemented using the Microsoft Antimalware virtual machine
+      extension. This extension is configured to perform heuristic detection, perform
+      both real-time and periodic scans (weekly), automatically update both the antimalware
+      engine and protection signatures as releases become available, perform automatic
+      remediation actions, and provide notifications through Azure Diagnostics.
+  remarks:
+  - text: ~
+- control_key: SI.1.213
+  control_name: Perform periodic scans of the information system and real-time scans
+    of files from external sources as files are downloaded, opened, or executed.
+  standard_key: CMMC_ver1
+  covered_by: []
+  security_control_type: Assigned
+  narrative:
+  - text: Host-based antimalware protections for customer-controlled Windows virtual
+      machines in Azure are implemented using the Microsoft Antimalware virtual machine
+      extension. This extension is configured to perform heuristic detection, perform
+      both real-time and periodic scans (weekly), automatically update both the antimalware
+      engine and protection signatures as releases become available, perform automatic
+      remediation actions, and provide notifications through Azure Diagnostics.
+  remarks:
+  - text: ~
