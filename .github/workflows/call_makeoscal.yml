@@ -1,0 +1,38 @@
+name: Call MakeOSCAL and Upload Actions
+
+on:
+  push:
+    branches:
+      - main # Replace 'main' with your default branch name if different
+
+jobs:
+  call_routes:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Install jq
+      run: |
+        sudo apt-get install jq
+
+    - name: Call MakeOSCAL action on Flask app
+      run: |
+        response=$(curl -s -X GET "https://mypipeline.govready.com/makeoscal")
+        echo "Response: $response"
+        status=$(echo "$response" | jq -r '.status')
+        if [ "$status" != "OK" ]; then
+          echo "MakeOSCAL action failed"
+          exit 1
+        fi
+
+    - name: Call Upload action on Flask app
+      run: |
+        response=$(curl -s -X GET "https://mypipeline.govready.com/upload")
+        echo "Response: $response"
+        status=$(echo "$response" | jq -r '.status')
+        if [ "$status" != "OK" ]; then
+          echo "Upload action failed"
+          exit 1
+        fi
