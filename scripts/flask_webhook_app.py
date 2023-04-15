@@ -27,4 +27,4 @@ def upload():
         return jsonify({'content': "No stdout", 'status': 'Error'})
 
 if __name__ == '__main__':
-    app.run(port=5050)
+    app.run(host=settings.FLASK_HOST, port=settings.FLASK_PORT)
