@@ -30,7 +30,7 @@ jobs:
 
     - name: Call Upload action on Flask app
       run: |
-        response=$(curl -s -X GET "http://pipeline.fotonotes.com/upload")
+        response=$(curl -s -X GET "http://pipeline.fotonotes.net/upload")
         echo "Response: $response"
         cleaned_response=$(echo "$response" | tr -d '\000-\037')
         status=$(echo "$cleaned_response" | jq -r '.status')
