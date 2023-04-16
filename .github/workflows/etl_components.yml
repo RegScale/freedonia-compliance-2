@@ -44,4 +44,4 @@ jobs:
         git checkout ge/oscal_component_fixes
         pip install -r requirements.txt
         python regscale.py init --domain https://dev.regscale.io/ --username ${{ secrets.REGSCALE_LOGIN }} --password ${{ secrets.REGSCALE_PASSWORD }}
-        # find '../freedonia-compliance-2/output/oscal -type f -name "*.json" -exec python ../regscale-cli/regscale.py oscal component {{}} \\;
+        find '../output/oscal -type f -name "*.json" -exec python ../regscale-cli/regscale.py oscal component {{}} \\;
