@@ -19,7 +19,7 @@ def make_oscal():
 
 @app.route('/upload', methods=['GET'])
 def upload():
-    cmd = f'find {settings.OUTPUTDIR} -type f -name "*.json" -exec python3 regscale.py oscal component {{}} \\;'
+    cmd = f'find {settings.OUTPUTDIR} -type f -name "*.json" -exec python3 ../regscale-cli/regscale.py oscal component {{}} \\;'
     result = subprocess.run(cmd, shell=True, capture_output=True, text=True)
     if result.stdout:
         return jsonify({'content': result.stdout, 'status': 'OK'})
