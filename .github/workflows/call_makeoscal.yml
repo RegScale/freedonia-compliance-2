@@ -3,7 +3,7 @@ name: Call MakeOSCAL and Upload Actions
 on:
   push:
     branches:
-      - master # Replace 'main' with your default branch name if different
+      - master2 # Replace 'main' with your default branch name if different
 
 jobs:
   call_routes:
