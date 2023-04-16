@@ -21,7 +21,8 @@ jobs:
       run: |
         response=$(curl -s -X GET "http://pipeline.fotonotes.net/makeoscal")
         echo "Response: $response"
-        status=$(echo "$response" | jq -r '.status')
+        cleaned_response=$(echo "$response" | tr -d '\000-\037')
+        status=$(echo "$cleaned_response" | jq -r '.status')
         if [ "$status" != "OK" ]; then
           echo "MakeOSCAL action failed"
           exit 1
@@ -31,7 +32,8 @@ jobs:
       run: |
         response=$(curl -s -X GET "http://pipeline.fotonotes.com/upload")
         echo "Response: $response"
-        status=$(echo "$response" | jq -r '.status')
+        cleaned_response=$(echo "$response" | tr -d '\000-\037')
+        status=$(echo "$cleaned_response" | jq -r '.status')
         if [ "$status" != "OK" ]; then
           echo "Upload action failed"
           exit 1
