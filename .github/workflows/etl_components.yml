@@ -13,10 +13,6 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v2
 
-    - name: Install jq
-      run: |
-        sudo apt-get install jq
-
     - name: Set up Python 3.10.10
       uses: actions/setup-python@v2
       with:
@@ -44,4 +40,7 @@ jobs:
         git checkout ge/oscal_component_fixes
         pip install -r requirements.txt
         python regscale.py init --domain https://dev.regscale.io/ --username ${{ secrets.REGSCALE_LOGIN }} --password ${{ secrets.REGSCALE_PASSWORD }}
+        
+    - name: Upload generated OSCAL components
+      run: |
         find ../output/oscal -type f -name "*.json" -exec python ../regscale-cli/regscale.py oscal component {} \;
