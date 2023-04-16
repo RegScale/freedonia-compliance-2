@@ -19,6 +19,10 @@ satisfies:
     narrative:
       - text: By providing a training platform with tracking and reporting capabilities, NINJIO helps organizations maintain records of completed security training for each user, fulfilling the requirements of AT-4.
   - standard_key: Electronic Version of NIST SP 800-53 Rev 5 Controls and SP 800-53A Rev 5 Assessment Procedures
+    control_key: PM-12
+    narrative:
+      - text: (CHANGE HERE 1) New sontent.
+  - standard_key: Electronic Version of NIST SP 800-53 Rev 5 Controls and SP 800-53A Rev 5 Assessment Procedures
     control_key: PM-13
     narrative:
       - text: (CHANGE HERE 3) NINJIO's security training materials contribute to the development of a skilled and knowledgeable information security workforce. By providing continuous training, NINJIO supports an organization in meeting the PM-13 control requirements.
