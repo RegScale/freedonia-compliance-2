@@ -35,3 +35,13 @@ jobs:
     - name: Run myscript.py from the scripts directory
       run: python ./scripts/make_oscal.py
 
+    - name: Clone private repository and switch to specific branch
+      env:
+        REGSCALE_CLI_PAT: ${{ secrets.REGSCALE_CLI_PAT }}
+      run: |
+        git clone https://x-access-token:${REGSCALE_CLI_PAT}@github.com/RegScale/regscale-cli.git
+        cd regscale-cli
+        git checkout ge/oscal_component_fixes
+        pip install -r requirements.txt
+        python regscale.py about
+        
