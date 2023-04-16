@@ -19,7 +19,7 @@ jobs:
 
     - name: Call MakeOSCAL action on Flask app
       run: |
-        response=$(curl -s -X GET "http://mypipeline.fotonotes.net/makeoscal")
+        response=$(curl -s -X GET "http://pipeline.fotonotes.net/makeoscal")
         echo "Response: $response"
         status=$(echo "$response" | jq -r '.status')
         if [ "$status" != "OK" ]; then
@@ -29,7 +29,7 @@ jobs:
 
     - name: Call Upload action on Flask app
       run: |
-        response=$(curl -s -X GET "http://mypipeline.fotonotes.com/upload")
+        response=$(curl -s -X GET "http://pipeline.fotonotes.com/upload")
         echo "Response: $response"
         status=$(echo "$response" | jq -r '.status')
         if [ "$status" != "OK" ]; then
