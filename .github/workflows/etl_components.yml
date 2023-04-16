@@ -35,24 +35,3 @@ jobs:
     - name: Run myscript.py from the scripts directory
       run: python ./scripts/make_oscal.py
 
-#    - name: Call MakeOSCAL action on Flask app
-#      run: |
-#        response=$(curl -s -X GET "http://pipeline.fotonotes.net/makeoscal")
-#        echo "Response: $response"
-#        cleaned_response=$(echo "$response" | tr -d '\000-\037')
-#        status=$(echo "$cleaned_response" | jq -r '.status')
-#        if [ "$status" != "OK" ]; then
-#          echo "MakeOSCAL action failed"
-#          exit 1
-#        fi
-#
-#    - name: Call Upload action on Flask app
-#      run: |
-#        response=$(curl -s -X GET "http://pipeline.fotonotes.net/upload")
-#        echo "Response: $response"
-#        cleaned_response=$(echo "$response" | tr -d '\000-\037')
-#        status=$(echo "$cleaned_response" | jq -r '.status')
-#        if [ "$status" != "OK" ]; then
-#          echo "Upload action failed"
-#          exit 1
-        fi
