@@ -25,7 +25,7 @@ satisfies:
   - standard_key: Electronic Version of NIST SP 800-53 Rev 5 Controls and SP 800-53A Rev 5 Assessment Procedures
     control_key: PM-14
     narrative:
-      - text: The use of NINJIO security training in an organization contributes to the PM-14 control by offering regular training on current and emerging cybersecurity threats. This helps organizations maintain a high level of user awareness and reduces the likelihood of security incidents.
+      - text: (CHANGE 1) The use of NINJIO security training in an organization contributes to the PM-14 control by offering regular training on current and emerging cybersecurity threats. This helps organizations maintain a high level of user awareness and reduces the likelihood of security incidents.
   - standard_key: Electronic Version of NIST SP 800-53 Rev 5 Controls and SP 800-53A Rev 5 Assessment Procedures
     control_key: SA-3
     narrative:
