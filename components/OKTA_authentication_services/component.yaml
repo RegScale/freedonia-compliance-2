@@ -9,11 +9,11 @@ satisfies:
   - standard_key: Electronic Version of NIST SP 800-53 Rev 5 Controls and SP 800-53A Rev 5 Assessment Procedures
     control_key: AC-2
     narrative:
-      - text: (Change 2) Okta Authentication Services help organizations implement account management processes such as provisioning, deprovisioning, and account modifications, thus contributing to the requirements of AC-2.
+      - text: Okta Authentication Services help organizations implement account management processes such as provisioning, deprovisioning, and account modifications, thus contributing to the requirements of AC-2.
   - standard_key: Electronic Version of NIST SP 800-53 Rev 5 Controls and SP 800-53A Rev 5 Assessment Procedures
     control_key: AC-3
     narrative:
-      - text: By providing centralized access control for enterprise applications, Okta Authentication Services support the enforcement of access control policies and contribute to meeting the AC-3 requirements.
+      - text: (CHANGE 1) By providing centralized access control for enterprise applications, Okta Authentication Services support the enforcement of access control policies and contribute to meeting the AC-3 requirements.
   - standard_key: Electronic Version of NIST SP 800-53 Rev 5 Controls and SP 800-53A Rev 5 Assessment Procedures
     control_key: AC-8
     narrative:
