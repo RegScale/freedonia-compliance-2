@@ -35,11 +35,6 @@ jobs:
       env:
         REGSCALE_CLI_PAT: ${{ secrets.REGSCALE_CLI_PAT }}
       run: |
-        #git clone https://x-access-token:${REGSCALE_CLI_PAT}@github.com/RegScale/regscale-cli.git
-        mkkdir regscale-cli
-        cd regscale-cli
-        #git checkout ge/oscal_component_fixes
-        #pip install -r requirements.txt
         python -m pip install regscale-cli
         python regscale.py init --domain https://dev.regscale.io/ --username ${{ secrets.REGSCALE_LOGIN }} --password ${{ secrets.REGSCALE_PASSWORD }}
-        find ../output/oscal -type f -name "*.json" -exec python ../regscale-cli/regscale.py oscal component {} \;
+        find output/oscal -type f -name "*.json" -exec python ../regscale-cli/regscale.py oscal component {} \;
