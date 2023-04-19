@@ -36,5 +36,5 @@ jobs:
         REGSCALE_CLI_PAT: ${{ secrets.REGSCALE_CLI_PAT }}
       run: |
         python -m pip install regscale-cli
-        python regscale.py init --domain https://dev.regscale.io/ --username ${{ secrets.REGSCALE_LOGIN }} --password ${{ secrets.REGSCALE_PASSWORD }}
-        find output/oscal -type f -name "*.json" -exec python ../regscale-cli/regscale.py oscal component {} \;
+        regscale init --domain https://dev.regscale.io/ --username ${{ secrets.REGSCALE_LOGIN }} --password ${{ secrets.REGSCALE_PASSWORD }}
+        find output/oscal -type f -name "*.json" -exec regscale oscal component {} \;
