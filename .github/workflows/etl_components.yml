@@ -23,7 +23,7 @@ jobs:
         python -m pip install --upgrade pip
         pip install rtyaml natsort requests structlog
 
-    - name: Create settings.py in the scripts directory
+    - name: Convert component OpenControl to OSCAL
       run: |
         echo "INPUTDIR = '../freedonia-compliance-2/components'" >> ./scripts/settings.py
         echo "OUTPUTDIR = '../freedonia-compliance-2/output/oscal'" >> ./scripts/settings.py
@@ -31,7 +31,7 @@ jobs:
     - name: Run myscript.py from the scripts directory
       run: python ./scripts/make_oscal.py
 
-    - name: Clone private repository and switch to specific branch
+    - name: Update components in RegScale via RegScale-CLI
       env:
         REGSCALE_CLI_PAT: ${{ secrets.REGSCALE_CLI_PAT }}
       run: |
