@@ -13,11 +13,11 @@ satisfies:
   - standard_key: Electronic Version of NIST SP 800-53 Rev 5 Controls and SP 800-53A Rev 5 Assessment Procedures
     control_key: AC-3
     narrative:
-      - text: (CHANGE x9) By providing centralized access control for enterprise applications, Okta Authentication Services support the enforcement of access control policies and contribute to meeting the AC-3 requirements.
+      - text: (CHANGE 2) By providing centralized access control for enterprise applications, Okta Authentication Services support the enforcement of access control policies and contribute to meeting the AC-3 requirements.
   - standard_key: Electronic Version of NIST SP 800-53 Rev 5 Controls and SP 800-53A Rev 5 Assessment Procedures
     control_key: AC-8
     narrative:
-      - text: (CHANGE x9) Okta supports the implementation of system use notifications for users accessing enterprise applications, helping organizations meet the requirements of AC-8.
+      - text: (CHANGE 2) Okta supports the implementation of system use notifications for users accessing enterprise applications, helping organizations meet the requirements of AC-8.
   - standard_key: Electronic Version of NIST SP 800-53 Rev 5 Controls and SP 800-53A Rev 5 Assessment Procedures
     control_key: AC-11
     narrative:
@@ -62,7 +62,7 @@ satisfies:
     control_key: SA-1
     control_title:: Developer Security Testing and Evaluation
     narratives:
-      - text: (change x3) As part of a secure development process, developers can use Okta's APIs and SDKs to integrate secure authentication and access control mechanisms into applications, contributing to the SA-11 control requirements.
+      - text: (change 2) As part of a secure development process, developers can use Okta's APIs and SDKs to integrate secure authentication and access control mechanisms into applications, contributing to the SA-11 control requirements.
   - standard_key: Electronic Version of NIST SP 800-53 Rev 5 Controls and SP 800-53A Rev 5 Assessment Procedures
     control_key: SC-7
     control_title: Boundary Protection
