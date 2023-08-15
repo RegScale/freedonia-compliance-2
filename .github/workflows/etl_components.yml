@@ -33,6 +33,6 @@ jobs:
 
     - name: Update components in RegScale via RegScale-CLI
       run: |
-        python -m pip install RegScale-CLI==5.3.0
+        python -m pip install RegScale-CLI
         regscale init --domain https://dev.regscale.io/ --username ${{ secrets.REGSCALE_LOGIN }} --password ${{ secrets.REGSCALE_PASSWORD }}
         find output/oscal -type f -name "*.json" -exec regscale oscal component --file_name {} \;
