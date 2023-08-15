@@ -35,4 +35,4 @@ jobs:
       run: |
         python -m pip install RegScale-CLI==5.3.0
         regscale init --domain https://dev.regscale.io/ --username ${{ secrets.REGSCALE_LOGIN }} --password ${{ secrets.REGSCALE_PASSWORD }}
-        find output/oscal -type f -name "*.json" -exec regscale oscal component {} \;
+        find output/oscal -type f -name "*.json" -exec regscale oscal component --file_name {} \;
